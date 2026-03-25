@@ -144,10 +144,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth antialiased text-slate-800 bg-[#FDFDFA]">
       <head>
-        <meta name="theme-color" content="#0B7D8E" />
-        <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=180&h=180" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self';" />
+        <meta name="theme-color" content="#0E9FB5" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

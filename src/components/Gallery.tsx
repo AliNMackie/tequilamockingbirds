@@ -1,18 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
 
   const images = [
-    { src: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=600", alt: "Close up of frozen margarita with lime garnish" },
-    { src: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=600", alt: "Happy guests enjoying frozen cocktails at a summer event" },
-    { src: "https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=600", alt: "Professional bartender mixing a signature tequila drink" },
-    { src: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=600", alt: "Our sleek mobile bar setup ready for a private party" },
-    { src: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=600", alt: "Details of our premium frozen cocktail menu" },
-    { src: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&q=80&w=600", alt: "The vibrant party atmosphere at a Tequila Mockingbirds event" },
+    { src: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800", alt: "Close up of frozen margarita with lime garnish" },
+    { src: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=800", alt: "Happy guests enjoying frozen cocktails at a summer event" },
+    { src: "https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=800", alt: "Professional bartender mixing a signature tequila drink" },
+    { src: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=800", alt: "Our sleek mobile bar setup ready for a private party" },
+    { src: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=800", alt: "Details of our premium frozen cocktail menu" },
+    { src: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&q=80&w=800", alt: "The vibrant party atmosphere at a Tequila Mockingbirds event" },
   ];
 
   return (
@@ -42,12 +41,10 @@ export default function Gallery() {
               </div>
               <div className="absolute inset-0 border-4 border-[#0B7D8E] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all z-20 rounded-xl pointer-events-none duration-300"></div>
               
-              <Image 
+              <img 
                 src={image.src} 
                 alt={image.alt} 
-                fill
-                sizes="(max-width: 768px) 50vw, 33vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </button>
           ))}
@@ -72,13 +69,11 @@ export default function Gallery() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <div className="relative max-w-5xl w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
-            <Image 
+          <div className="relative max-w-5xl w-full h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            <img 
               src={selectedImage.src} 
               alt={selectedImage.alt} 
-              fill
-              priority
-              className="object-contain"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             />
           </div>
         </div>
