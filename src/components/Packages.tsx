@@ -3,7 +3,7 @@ export default function Packages() {
     {
       id: "private-parties",
       title: "Private Parties",
-      description: "[Placeholder] Perfect for birthdays, engagements, and garden parties. Elevate your celebration with a touch of beach club luxury.",
+      description: "Perfect for birthdays, engagements, and garden parties. Elevate your celebration with a touch of beach club luxury.",
       inclusions: [
         "Fully staffed mobile bar setup",
         "2 Signature frozen tequila cocktails",
@@ -15,7 +15,7 @@ export default function Packages() {
     {
       id: "corporate-events",
       title: "Corporate & Brand Events",
-      description: "[Placeholder] Impress clients and treat your team. High-volume, high-quality service tailored to your brand aesthetic.",
+      description: "Impress clients and treat your team. High-volume, high-quality service tailored to your brand aesthetic.",
       inclusions: [
         "Custom branded menus & cups",
         "3 Signature frozen tequila cocktails",
@@ -29,7 +29,7 @@ export default function Packages() {
     {
       id: "festivals-popups",
       title: "Festivals & Pop‑ups",
-      description: "[Placeholder] The ultimate crowd-pleaser. Fast-paced service for high footfall environments without compromising on quality.",
+      description: "The ultimate crowd-pleaser. Fast-paced service for high footfall environments without compromising on quality.",
       inclusions: [
         "High-capacity frozen margarita machines",
         "Rapid service staff",

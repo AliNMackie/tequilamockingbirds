@@ -31,10 +31,13 @@ export default function Hero() {
             index === currentImageIndex ? "opacity-40" : "opacity-0"
           }`}
         >
-          <img
+          <Image
             src={src}
             alt="Tequila Mockingbirds premium mobile frozen cocktail bar service at a UK event"
-            className="w-full h-full object-cover"
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className="object-cover"
           />
         </div>
       ))}
@@ -66,9 +69,9 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-bounce">
-        <span className="text-white/60 text-[10px] font-medium tracking-[0.2em] uppercase">Scroll</span>
-        <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-white/60">
+      <div className="absolute bottom-[2rem] left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-20 pointer-events-none">
+        <span className="text-white/50 text-[11px] font-medium tracking-[0.15em] uppercase">Scroll</span>
+        <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-white/50 animate-bounce">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
         </svg>
       </div>

@@ -63,8 +63,11 @@ export default function Navigation() {
         <button
           className="md:hidden p-2 text-slate-800"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
-          <div className="w-6 flex flex-col gap-1.5">
+          <div className="w-6 flex flex-col gap-1.5" aria-hidden="true">
             <span className={`block h-[2px] w-full transition-all ${isScrolled ? 'bg-slate-800' : 'bg-white'}`}></span>
             <span className={`block h-[2px] w-full transition-all ${isScrolled ? 'bg-slate-800' : 'bg-white'}`}></span>
             <span className={`block h-[2px] w-3 transition-all ${isScrolled ? 'bg-slate-800' : 'bg-white'}`}></span>
@@ -74,7 +77,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-[#FDFDFA] shadow-lg border-t border-slate-100 p-6 flex flex-col gap-4">
+        <div id="mobile-menu" className="md:hidden absolute top-full left-0 right-0 bg-[#FDFDFA] shadow-lg border-t border-slate-100 p-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <a
               key={link.name}

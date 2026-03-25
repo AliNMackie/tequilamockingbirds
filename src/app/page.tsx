@@ -48,8 +48,8 @@ export default function Home() {
           </div>
           
           <div className="mt-8 pt-8 border-t border-slate-100 text-center">
-            <p className="text-[10px] text-slate-400 uppercase tracking-widest">
-              A premium mobile frozen tequila bar. Available across the UK.
+            <p className="text-[10px] text-slate-400 tracking-wider">
+              A Premium Mobile Frozen Tequila Bar. Available Across the UK.
             </p>
           </div>
         </div>
