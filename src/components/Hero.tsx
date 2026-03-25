@@ -33,7 +33,7 @@ export default function Hero() {
         >
           <img
             src={src}
-            alt="Tequila Mockingbirds Event"
+            alt="Tequila Mockingbirds premium mobile frozen cocktail bar service at a UK event"
             className="w-full h-full object-cover"
           />
         </div>

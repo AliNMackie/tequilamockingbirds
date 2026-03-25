@@ -69,7 +69,7 @@ export default function Gallery() {
           <div className="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
             <img 
               src={selectedImage} 
-              alt="Gallery enlarged view" 
+              alt="High-resolution view of Tequila Mockingbirds cocktails and event atmosphere" 
               className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             />
           </div>

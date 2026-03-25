@@ -1,0 +1,11 @@
+# Tequila Mockingbirds
+A premium mobile frozen tequila cocktail bar available for hire across the UK for private parties, corporate events, festivals and celebrations.
+
+Services: Frozen tequila cocktails, mobile bar hire, event bartenders, private party bar, corporate bar service, festival bar hire
+
+Contact: hello@tequilamockingbirds.co.uk
+Website: https://tequilamockingbirds.netlify.app
+
+Packages: Private Parties (from £450), Corporate & Brand Events (POA), Festivals & Pop-ups (POA)
+
+FAQ: See /index.html#faq for common questions about travel radius, power requirements, non-alcoholic options and minimum spend.

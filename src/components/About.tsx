@@ -51,7 +51,7 @@ export default function About() {
           <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=1000" 
-              alt="Bartender preparing cocktails" 
+              alt="Professional bartender preparing a signature frozen margarita at a Tequila Mockingbirds event" 
               className="w-full h-full object-cover"
             />
             {/* Decorative accent */}
