@@ -4,6 +4,16 @@ import { useState, useEffect } from "react";
 
 export default function Enquiry() {
   const [selectedPackage, setSelectedPackage] = useState("");
+  const [formData, setFormData] = useState<Record<string, string>>({
+    name: "",
+    email: "",
+    phone: "",
+    eventType: "",
+    date: "",
+    location: "",
+    guests: "",
+    message: ""
+  });
   
   // Set initial package from URL if present
   useEffect(() => {
@@ -17,17 +27,40 @@ export default function Enquiry() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate network request
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      // Reset after 3 seconds
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ 
+        "form-name": "enquiry", 
+        ...formData,
+        package: selectedPackage 
+      })
+    })
+      .then(() => {
+        setIsSubmitting(false);
+        setIsSuccess(true);
+        setTimeout(() => setIsSuccess(false), 5000);
+      })
+      .catch(error => {
+        console.error("Form submission error:", error);
+        setIsSubmitting(false);
+        alert("There was an error sending your message. Please try again.");
+      });
   };
 
   return (
@@ -44,7 +77,16 @@ export default function Enquiry() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 shadow-2xl">
+        <form 
+          name="enquiry"
+          method="POST"
+          data-netlify="true"
+          onSubmit={handleSubmit} 
+          className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 shadow-2xl"
+        >
+          {/* Netlify hidden input */}
+          <input type="hidden" name="form-name" value="enquiry" />
+
           {isSuccess ? (
             <div className="text-center py-16">
               <div className="w-16 h-16 bg-[#0E9FB5]/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -60,23 +102,23 @@ export default function Enquiry() {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-white/90">Full Name *</label>
-                  <input required type="text" id="name" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors" placeholder="Jane Doe" />
+                  <input required name="name" type="text" id="name" onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors" placeholder="Jane Doe" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium text-white/90">Email Address *</label>
-                  <input required type="email" id="email" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors" placeholder="jane@example.com" />
+                  <input required name="email" type="email" id="email" onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors" placeholder="jane@example.com" />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="phone" className="text-sm font-medium text-white/90">Phone Number</label>
-                  <input type="tel" id="phone" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors" placeholder="+44 7000 000000" />
+                  <input name="phone" type="tel" id="phone" onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors" placeholder="+44 7000 000000" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="eventType" className="text-sm font-medium text-white/90">Event Type *</label>
-                  <select required id="eventType" className="w-full bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors appearance-none">
-                    <option value="" disabled selected>Select event type</option>
+                  <select required name="eventType" id="eventType" onChange={handleInputChange} className="w-full bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors appearance-none" defaultValue="">
+                    <option value="" disabled>Select event type</option>
                     <option value="private">Private Party</option>
                     <option value="corporate">Corporate Event</option>
                     <option value="festival">Festival / Pop-up</option>
@@ -88,19 +130,19 @@ export default function Enquiry() {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="date" className="text-sm font-medium text-white/90">Event Date *</label>
-                  <input required type="date" id="date" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors [color-scheme:dark]" />
+                  <input required name="date" type="date" id="date" onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors [color-scheme:dark]" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="location" className="text-sm font-medium text-white/90">Location (Town/Postcode) *</label>
-                  <input required type="text" id="location" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors" placeholder="e.g. Manchester, M1" />
+                  <input required name="location" type="text" id="location" onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors" placeholder="e.g. Manchester, M1" />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="guests" className="text-sm font-medium text-white/90">Approx. Guests *</label>
-                  <select required id="guests" className="w-full bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors appearance-none">
-                    <option value="" disabled selected>Select guest count</option>
+                  <select required name="guests" id="guests" onChange={handleInputChange} className="w-full bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors appearance-none" defaultValue="">
+                    <option value="" disabled>Select guest count</option>
                     <option value="0-50">Up to 50</option>
                     <option value="50-100">50 - 100</option>
                     <option value="100-250">100 - 250</option>
@@ -110,6 +152,7 @@ export default function Enquiry() {
                 <div className="space-y-2">
                   <label htmlFor="package" className="text-sm font-medium text-white/90">Package of Interest</label>
                   <select 
+                    name="package"
                     id="package" 
                     value={selectedPackage}
                     onChange={(e) => setSelectedPackage(e.target.value)}
@@ -125,7 +168,7 @@ export default function Enquiry() {
 
               <div className="space-y-2 mb-8">
                 <label htmlFor="message" className="text-sm font-medium text-white/90">Anything else we should know?</label>
-                <textarea id="message" rows={4} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors resize-none" placeholder="Tell us about the vibe..."></textarea>
+                <textarea name="message" id="message" onChange={handleInputChange} rows={4} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#0E9FB5] focus:ring-1 focus:ring-[#0E9FB5] transition-colors resize-none" placeholder="Tell us about the vibe..."></textarea>
               </div>
 
               <button 
