@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tequila Mockingbirds Forms</title>
+</head>
+<body>
+    <!-- This file is used by Netlify to detect forms in Next.js App Router projects -->
+    <form name="enquiry" data-netlify="true" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <select name="eventType">
+            <option value="private"></option>
+            <option value="corporate"></option>
+            <option value="festival"></option>
+            <option value="other"></option>
+        </select>
+        <input type="date" name="date" />
+        <input type="text" name="location" />
+        <select name="guests">
+            <option value="0-50"></option>
+            <option value="50-100"></option>
+            <option value="100-250"></option>
+            <option value="250+"></option>
+        </select>
+        <select name="package">
+            <option value=""></option>
+            <option value="private-parties"></option>
+            <option value="corporate-events"></option>
+            <option value="festivals-popups"></option>
+        </select>
+        <textarea name="message"></textarea>
+        <!-- Hidden input for Netlify bot detection -->
+        <input type="hidden" name="form-name" value="enquiry" />
+    </form>
+</body>
+</html>

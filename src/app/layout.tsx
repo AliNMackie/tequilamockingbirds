@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export const metadata: Metadata = {
   title: "Tequila Mockingbirds | High-End Mobile Frozen Tequila Bar",
@@ -19,6 +20,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
       </head>
       <body className="flex flex-col min-h-full font-sans">
+        <LoadingScreen />
         {children}
       </body>
     </html>
