@@ -11,10 +11,10 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
               <p>
-                [Placeholder copy] We take the classic frozen margarita and elevate it to an art form. Born from a love of beach club culture and premium spirits, Tequila Mockingbirds is not just a drink service—it's an experience.
+                We take the classic frozen margarita and elevate it to an art form. Born from a love of beach club culture and premium spirits, Tequila Mockingbirds is not just a drink service—it's an experience.
               </p>
               <p>
-                [Placeholder copy] Whether you're hosting an intimate garden party or a large-scale corporate festival, our mobile bar brings the aesthetics of a high-end lounge directly to your venue, complete with expert bartenders and Instagram-ready presentation.
+                Whether you're hosting an intimate garden party or a large-scale corporate festival, our mobile bar brings the aesthetics of a high-end lounge directly to your venue, complete with expert bartenders and Instagram-ready presentation.
               </p>
             </div>
             

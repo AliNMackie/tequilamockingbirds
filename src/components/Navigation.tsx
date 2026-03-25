@@ -19,6 +19,7 @@ export default function Navigation() {
     { name: "Packages", href: "#packages" },
     { name: "How It Works", href: "#how-it-works" },
     { name: "Gallery", href: "#gallery" },
+    { name: "FAQ", href: "#faq" },
   ];
 
   return (
