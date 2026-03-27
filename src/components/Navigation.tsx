@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import BrandLogo from "./BrandLogo";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,14 +31,8 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm relative overflow-hidden group-hover:scale-105 transition-transform" aria-label="Tequila Mockingbirds Logo">
-            <span className="font-display font-bold text-[#0E9FB5] text-xl tracking-tight relative z-10">tm</span>
-            <div className="absolute bottom-1 right-2 w-1.5 h-1.5 rounded-full bg-[#FF62C8]"></div>
-          </div>
-          <span className={`font-display font-semibold transition-colors ${isScrolled ? "text-slate-800" : "text-white"}`}>
-            Tequila Mockingbirds
-          </span>
+        <a href="#" className="flex items-center group py-2">
+          <BrandLogo isLight={!isScrolled} />
         </a>
 
         {/* Desktop Nav */}

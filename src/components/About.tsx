@@ -48,12 +48,19 @@ export default function About() {
           </div>
 
           {/* Right: Image */}
-          <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src="https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=1000" 
-              alt="Professional bartender preparing a signature frozen margarita at a Tequila Mockingbirds event" 
-              className="w-full h-full object-cover"
-            />
+          <div className="relative h-[600px]">
+            {/* Professional Frame */}
+            <div className="absolute -top-4 -left-4 -bottom-4 -right-4 border-2 border-[#0E9FB5]/20 rounded-3xl pointer-events-none"></div>
+            <div className="absolute -top-2 -left-2 w-12 h-12 border-t-4 border-l-4 border-[#0E9FB5] rounded-tl-2xl pointer-events-none"></div>
+            <div className="absolute -bottom-2 -right-2 w-12 h-12 border-b-4 border-r-4 border-[#FF62C8] rounded-br-2xl pointer-events-none"></div>
+            
+            <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative">
+              <img 
+                src="https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=1000" 
+                alt="Professional bartender preparing a signature frozen margarita at a Tequila Mockingbirds event" 
+                className="w-full h-full object-cover"
+              />
+            </div>
             {/* Decorative accent */}
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#FF62C8] rounded-full blur-2xl opacity-40"></div>
           </div>

@@ -6,6 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 import Enquiry from "@/components/Enquiry";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function Home() {
   return (
@@ -24,14 +25,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
             {/* Left: Brand */}
-            <div className="flex items-center justify-center md:justify-start gap-2">
-              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm border border-slate-100 relative overflow-hidden" aria-label="Tequila Mockingbirds Icon">
-                <span className="font-display font-bold text-[#0E9FB5] text-sm relative z-10">tm</span>
-                <div className="absolute bottom-0.5 right-1 w-1 h-1 rounded-full bg-[#FF62C8]"></div>
-              </div>
-              <span className="font-display font-semibold text-slate-800">
-                Tequila Mockingbirds
-              </span>
+            <div className="flex items-center justify-center md:justify-start">
+              <BrandLogo className="scale-75 origin-left" />
             </div>
 
             {/* Centre: Contact */}

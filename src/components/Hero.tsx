@@ -40,27 +40,34 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight drop-shadow-sm">
-          Frozen Tequila Cocktails.<br />
-          <span className="text-[#FDFDFA]/90">Anywhere You Celebrate.</span>
-        </h1>
-        <p className="text-lg md:text-xl text-white/90 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
-          The ultimate high-end mobile bar bringing premium frozen margaritas and legendary vibes to private parties, corporate events, and festivals across the UK.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#enquire"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#0E9FB5] text-white font-medium text-lg hover:bg-[#0c8a9d] transition-colors shadow-lg shadow-[#0E9FB5]/20"
-          >
-            Enquire Now
-          </a>
-          <a
-            href="#packages"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-900 font-medium text-lg hover:bg-slate-50 transition-colors shadow-lg"
-          >
-            View Packages
-          </a>
+        <div className="relative p-8 md:p-12">
+          {/* Brand Frame Accents */}
+          <div className="absolute inset-0 border-2 border-[#0E9FB5]/30 rounded-[2rem] pointer-events-none"></div>
+          <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-[#0E9FB5] rounded-tl-xl pointer-events-none"></div>
+          <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-[#0E9FB5] rounded-br-xl pointer-events-none"></div>
+          
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight drop-shadow-sm">
+            Frozen Tequila Cocktails.<br />
+            <span className="text-[#FDFDFA]/90">Anywhere You Celebrate.</span>
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+            The ultimate high-end mobile bar bringing premium frozen margaritas and legendary vibes to private parties, corporate events, and festivals across the UK.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#enquire"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#0E9FB5] text-white font-medium text-lg hover:bg-[#0c8a9d] transition-colors shadow-lg shadow-[#0E9FB5]/20"
+            >
+              Enquire Now
+            </a>
+            <a
+              href="#packages"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-900 font-medium text-lg hover:bg-slate-50 transition-colors shadow-lg"
+            >
+              View Packages
+            </a>
+          </div>
         </div>
       </div>
 
