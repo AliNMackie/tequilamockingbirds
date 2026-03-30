@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "private-parties",
+      "title": "Private Parties",
+      "description": "Perfect for birthdays, engagements, and garden parties. Elevate your celebration with a touch of beach club luxury.",
+      "price": "From £450",
+      "featured": false,
+      "inclusions": [
+        "Fully staffed mobile bar setup",
+        "2 Signature frozen tequila cocktails",
+        "Premium glassware & garnishes",
+        "3 hours of service"
+      ]
+    },
+    {
+      "id": "corporate-events",
+      "title": "Corporate & Brand Events",
+      "description": "Impress clients and treat your team. High-volume, high-quality service tailored to your brand aesthetic.",
+      "price": "POA",
+      "featured": true,
+      "inclusions": [
+        "Custom branded menus & cups",
+        "3 Signature frozen tequila cocktails",
+        "Non-alcoholic frozen options",
+        "Up to 5 hours of service",
+        "Dedicated event manager"
+      ]
+    },
+    {
+      "id": "festivals-popups",
+      "title": "Festivals & Pop‑ups",
+      "description": "The ultimate crowd-pleaser. Fast-paced service for high footfall environments without compromising on quality.",
+      "price": "POA",
+      "featured": false,
+      "inclusions": [
+        "High-capacity frozen margarita machines",
+        "Rapid service staff",
+        "Eco-friendly disposable cups",
+        "Custom footprint options"
+      ]
+    }
+  ]
+}

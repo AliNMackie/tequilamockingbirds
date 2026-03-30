@@ -18,7 +18,7 @@ export default function Gallery() {
     <section id="gallery" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800 mb-4">The Vibe</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800 mb-4 tracking-tight text-center">The Vibe</h2>
           <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
             A glimpse into the Tequila Mockingbirds experience. Premium drinks, beautiful aesthetics, and unforgettable moments.
           </p>
@@ -28,7 +28,7 @@ export default function Gallery() {
           {images.map((image, index) => (
             <button 
               key={index} 
-              className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group text-left p-0 border-0 outline-none focus-visible:ring-4 focus-visible:ring-[#0B7D8E]"
+              className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group text-left p-0 border-0 outline-none focus-visible:ring-4 focus-visible:ring-[#28a0bc]"
               onClick={() => setSelectedImage(image)}
               aria-label={`View large version of ${image.alt}`}
             >
@@ -39,7 +39,7 @@ export default function Gallery() {
                   </svg>
                 </div>
               </div>
-              <div className="absolute inset-0 border-4 border-[#0B7D8E] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all z-20 rounded-xl pointer-events-none duration-300"></div>
+              <div className="absolute inset-0 border-4 border-[#28a0bc] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all z-20 rounded-xl pointer-events-none duration-300"></div>
               
               <img 
                 src={image.src} 

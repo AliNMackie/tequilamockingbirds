@@ -33,10 +33,10 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-[#FDFDFA]">
+    <section id="how-it-works" className="py-24 bg-[#feffee]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800 mb-4">How It Works</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800 mb-4 tracking-tight">How It Works</h2>
           <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
             Booking Tequila Mockingbirds is simple. We handle everything from the bar setup to the cleanup, so you can focus on enjoying the party.
           </p>
@@ -44,14 +44,14 @@ export default function HowItWorks() {
 
         <div className="relative">
           {/* Connecting line for desktop */}
-          <div className="hidden md:block absolute top-[4.5rem] left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#0E9FB5]/10 via-[#0E9FB5] to-[#0E9FB5]/10"></div>
+          <div className="hidden md:block absolute top-[4.5rem] left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#28a0bc]/10 via-[#28a0bc] to-[#28a0bc]/10"></div>
 
           <div className="grid md:grid-cols-3 gap-12 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
-                <div className="w-36 h-36 rounded-full bg-white border-8 border-[#FDFDFA] shadow-xl flex flex-col items-center justify-center text-[#0E9FB5] mb-8 relative group-hover:scale-105 transition-transform duration-300">
+                <div className="w-36 h-36 rounded-full bg-white border-8 border-[#feffee] shadow-xl flex flex-col items-center justify-center text-[#28a0bc] mb-8 relative group-hover:scale-105 transition-transform duration-300">
                   {step.icon}
-                  <div className="absolute top-0 right-0 w-8 h-8 rounded-full bg-[#FF62C8] text-white text-xs font-bold flex items-center justify-center shadow-md translate-x-2 -translate-y-2">
+                  <div className="absolute top-0 right-0 w-8 h-8 rounded-full bg-[#ff7be6] text-white text-xs font-bold flex items-center justify-center shadow-md translate-x-2 -translate-y-2">
                     {step.number}
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import heroContent from "@/content/hero.json";
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -24,15 +25,15 @@ export default function Hero() {
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-slate-900">
       {/* Background Slideshow */}
       {images.map((src, index) => (
-        <div
+        <div 
           key={src}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === currentImageIndex ? "opacity-40" : "opacity-0"
           }`}
         >
-          <img
-            src={src}
-            alt="Tequila Mockingbirds premium mobile frozen cocktail bar service at a UK event"
+          <img 
+            src={src} 
+            alt="Tequila Mockingbirds premium mobile frozen cocktail bar service at a UK event" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -42,30 +43,29 @@ export default function Hero() {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
         <div className="relative p-8 md:p-12">
           {/* Brand Frame Accents */}
-          <div className="absolute inset-0 border-2 border-[#0E9FB5]/30 rounded-[2rem] pointer-events-none"></div>
-          <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-[#0E9FB5] rounded-tl-xl pointer-events-none"></div>
-          <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-[#0E9FB5] rounded-br-xl pointer-events-none"></div>
+          <div className="absolute inset-0 border-2 border-[#28a0bc]/30 rounded-[2rem] pointer-events-none"></div>
+          <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-[#28a0bc] rounded-tl-xl pointer-events-none"></div>
+          <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-[#ff7be6] rounded-br-xl pointer-events-none"></div>
           
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight drop-shadow-sm">
-            Frozen Tequila Cocktails.<br />
-            <span className="text-[#FDFDFA]/90">Anywhere You Celebrate.</span>
+          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-6 tracking-tight drop-shadow-sm">
+            {heroContent.title}
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
-            The ultimate high-end mobile bar bringing premium frozen margaritas and legendary vibes to private parties, corporate events, and festivals across the UK.
-          </p>
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-[#feffee]/90 mb-10 tracking-[0.2em] uppercase">
+            {heroContent.subtitle}
+          </h2>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#enquire"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#0E9FB5] text-white font-medium text-lg hover:bg-[#0c8a9d] transition-colors shadow-lg shadow-[#0E9FB5]/20"
+              className="w-full sm:w-auto px-10 py-4 rounded-full bg-[#28a0bc] text-white font-medium text-lg hover:bg-[#238ca5] transition-all shadow-lg shadow-[#28a0bc]/20"
             >
-              Enquire Now
+              {heroContent.buttonText}
             </a>
             <a
               href="#packages"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-slate-900 font-medium text-lg hover:bg-slate-50 transition-colors shadow-lg"
+              className="w-full sm:w-auto px-10 py-4 rounded-full bg-white text-slate-900 font-medium text-lg hover:bg-slate-50 transition-all shadow-lg"
             >
-              View Packages
+              {heroContent.secondaryButtonText}
             </a>
           </div>
         </div>

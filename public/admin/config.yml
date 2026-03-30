@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "hero"
+        label: "Hero Section"
+        file: "src/content/hero.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Secondary Button Text", name: "secondaryButtonText", widget: "string" }
+
+      - name: "about"
+        label: "About Section"
+        file: "src/content/about.json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Heading Highlight", name: "headingHighlight", widget: "string" }
+          - { label: "Description Paragraph 1", name: "description1", widget: "text" }
+          - { label: "Description Paragraph 2", name: "description2", widget: "text" }
+          - name: "features"
+            label: "Features"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+
+      - name: "packages"
+        label: "Packages"
+        file: "src/content/packages.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "hidden" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Featured", name: "featured", widget: "boolean" }
+              - { label: "Inclusions", name: "inclusions", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+
+      - name: "faq"
+        label: "FAQ"
+        file: "src/content/faq.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }

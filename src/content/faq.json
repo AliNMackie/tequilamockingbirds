@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "question": "How far do you travel?",
+      "answer": "Based in the UK, we cover events nationwide. Travel within a 50-mile radius of our base is included; beyond that, a small mileage fee applies."
+    },
+    {
+      "question": "Do you need access to power and water?",
+      "answer": "We need access to a standard 13-amp plug socket to run our high-end frozen slush machines. We bring our own water supply for the machines if a mains connection isn't available nearby."
+    },
+    {
+      "question": "Are non-alcoholic options available?",
+      "answer": "Absolutely. We always offer premium frozen mocktails alongside our signature alcoholic serves to ensure all guests are catered for."
+    },
+    {
+      "question": "Do you have a minimum spend or minimum guest count?",
+      "answer": "Our packages start for events with 30+ guests. For smaller intimate gatherings, please enquire for a bespoke quote."
+    },
+    {
+      "question": "What exactly is included in the service?",
+      "answer": "Everything you need: the mobile bar, machines, premium spirits & ingredients, glassware (or premium eco-cups), garnishes, and professional bartenders."
+    }
+  ]
+}
