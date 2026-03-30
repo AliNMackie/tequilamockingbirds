@@ -25,11 +25,11 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         isScrolled ? "bg-[#feffee]/95 backdrop-blur-md shadow-sm border-b border-[#28a0bc]/10" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <div className={`max-w-7xl mx-auto px-6 transition-all duration-700 flex items-center justify-between ${isScrolled ? 'h-20' : 'h-40 md:h-56'}`}>
         {/* Left Nav (Desktop) */}
         <nav className="hidden md:flex items-center gap-8 flex-1">
           {navLinks.slice(0, 3).map((link) => (
@@ -45,7 +45,7 @@ export default function Navigation() {
 
         {/* Logo (Centered) */}
         <div className="flex-shrink-0 flex justify-center">
-          <a href="#" className={`flex items-center transition-transform duration-300 ${isScrolled ? 'scale-90' : 'scale-110'}`}>
+          <a href="#" className={`flex items-center transition-all duration-700 ${isScrolled ? 'scale-90 opacity-100' : 'scale-125 md:scale-[2.2] mt-4'}`}>
             <BrandLogo isLight={!isScrolled} />
           </a>
         </div>
