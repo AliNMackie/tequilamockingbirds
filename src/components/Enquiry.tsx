@@ -15,13 +15,27 @@ export default function Enquiry() {
     message: ""
   });
   
-  // Set initial package from URL if present
+  // Set initial package from URL if present (checks both ? and # parameters)
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const pkg = params.get('package');
-    if (pkg) {
-      setSelectedPackage(pkg);
-    }
+    const checkParams = () => {
+      // Check query params
+      const queryParams = new URLSearchParams(window.location.search);
+      let pkg = queryParams.get('package');
+      
+      // If not in query, check hash (e.g. #enquire?package=private-parties)
+      if (!pkg && window.location.hash.includes('package=')) {
+        const hashParams = new URLSearchParams(window.location.hash.split('?')[1]);
+        pkg = hashParams.get('package');
+      }
+
+      if (pkg) {
+        setSelectedPackage(pkg);
+      }
+    };
+
+    checkParams();
+    window.addEventListener('hashchange', checkParams);
+    return () => window.removeEventListener('hashchange', checkParams);
   }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,17 +89,19 @@ export default function Enquiry() {
           <p className="text-lg text-white/80 font-light max-w-2xl mx-auto">
             Tell us a few details about your celebration and we’ll come back with a tailored quote within 24 hours.
           </p>
-        </div>
-
-        <form 
+        </div>        <form 
           name="enquiry"
           method="POST"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit} 
           className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 shadow-2xl"
         >
-          {/* Netlify hidden input */}
+          {/* Netlify hidden inputs */}
           <input type="hidden" name="form-name" value="enquiry" />
+          <p className="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
 
           {isSuccess ? (
             <div className="text-center py-16">
@@ -113,7 +129,7 @@ export default function Enquiry() {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="phone" className="text-sm font-medium text-white/90">Phone Number</label>
-                  <input name="phone" type="tel" id="phone" onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#28a0bc] focus:ring-1 focus:ring-[#28a0bc] transition-colors" placeholder="+44 7000 000000" />
+                  <input name="phone" type="tel" id="phone" onChange={handleInputChange} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#28a0bc] focus:ring-1 focus:ring-[#28a0bc] transition-colors" placeholder="" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="eventType" className="text-sm font-medium text-white/90">Event Type *</label>

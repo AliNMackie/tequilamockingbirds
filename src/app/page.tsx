@@ -33,11 +33,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 text-sm text-slate-600">
               <p className="flex items-center justify-center md:justify-start gap-2">
                 <span className="font-bold text-[#28a0bc] min-w-[80px]">Email:</span> 
-                <a href="mailto:hello@tequilamockingbirds.co.uk" className="hover:text-[#28a0bc] transition-colors">hello@tequilamockingbirds.co.uk</a>
-              </p>
-              <p className="flex items-center justify-center md:justify-start gap-2">
-                <span className="font-bold text-[#28a0bc] min-w-[80px]">Phone:</span> 
-                <a href="tel:+447700000000" className="hover:text-[#28a0bc] transition-colors">+44 (0) 7700 000000</a>
+                <a href="mailto:hello@tequilamockingbirds.com" className="hover:text-[#28a0bc] transition-colors">hello@tequilamockingbirds.com</a>
               </p>
               <p className="flex items-center justify-center md:justify-start gap-2">
                 <span className="font-bold text-[#28a0bc] min-w-[80px]">Instagram:</span> 

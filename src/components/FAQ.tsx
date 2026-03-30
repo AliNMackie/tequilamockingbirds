@@ -45,11 +45,11 @@ export default function FAQ() {
               </button>
               
               <div 
-                className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? "max-h-48 pb-6 opacity-100" : "max-h-0 pb-0 opacity-0"
+                className={`px-6 overflow-hidden transition-all duration-500 ease-in-out ${
+                  openIndex === index ? "max-h-[500px] pb-6 opacity-100" : "max-h-0 pb-0 opacity-0"
                 }`}
               >
-                <p className="text-slate-600 font-light line-clamp-4">
+                <p className="text-slate-600 font-light leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
