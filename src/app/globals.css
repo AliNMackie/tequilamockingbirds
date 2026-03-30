@@ -14,10 +14,26 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.branded-heading {
+  @apply font-display font-bold tracking-tight;
+  color: #28a0bc;
+  text-shadow: 2px 2px 0px #ff7be6;
+}
+
+.branded-heading-light {
+  @apply font-display font-bold tracking-tight;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #28a0bc;
+}
+
+.branded-heading {
+  @apply font-display font-bold tracking-tight;
+  color: #28a0bc;
+  text-shadow: 2px 2px 0px #ff7be6;
+}
+
+.branded-heading-light {
+  @apply font-display font-bold tracking-tight;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #28a0bc;
 }

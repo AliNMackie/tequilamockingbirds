@@ -4,10 +4,12 @@ export default function Packages() {
   const packages = packagesContent.items;
 
   return (
-    <section id="packages" className="py-24 bg-white">
+    <section id="packages" className="py-24 bg-[#FDFDFA]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800 mb-4">Packages</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            <span className="text-[#28a0bc]">Our</span> <span className="text-[#ff7be6]">Packages</span>
+          </h2>
           <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
             Choose the perfect frozen tequila experience for your event. All packages include our signature beautiful bar setup and professional bartenders.
           </p>

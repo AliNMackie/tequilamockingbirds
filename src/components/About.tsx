@@ -8,8 +8,9 @@ export default function About() {
           
           {/* Left: Text Content */}
           <div>
-            <h2 className="font-display text-5xl md:text-6xl font-bold text-slate-800 mb-8 leading-tight">
-              {aboutContent.heading} <span className="text-[#28a0bc]">{aboutContent.headingHighlight}</span>
+            <h2 className="font-display text-5xl md:text-6xl font-bold mb-8 leading-tight">
+              <span className="text-[#28a0bc]">Meet</span> <span className="text-[#ff7be6]">Tequila</span> <br />
+              <span className="text-[#28a0bc]">Mockingbirds</span>
             </h2>
             <div className="space-y-6 text-xl text-slate-600 font-light leading-relaxed">
               <p>

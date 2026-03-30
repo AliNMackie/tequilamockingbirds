@@ -1,19 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import BrandLogo from "./BrandLogo";
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navLinks = [
     { name: "About", href: "#about" },
@@ -24,19 +15,15 @@ export default function Navigation() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        isScrolled ? "bg-[#feffee]/95 backdrop-blur-md shadow-sm border-b border-[#28a0bc]/10" : "bg-transparent"
-      }`}
-    >
-      <div className={`max-w-7xl mx-auto px-6 transition-all duration-700 flex items-center justify-between ${isScrolled ? 'h-20' : 'h-40 md:h-56'}`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-40 md:h-56">
         {/* Left Nav (Desktop) */}
         <nav className="hidden md:flex items-center gap-8 flex-1">
           {navLinks.slice(0, 3).map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-[#28a0bc] ${isScrolled ? "text-slate-600" : "text-white/90"}`}
+              className="text-sm font-medium tracking-wide transition-colors hover:text-[#28a0bc] text-white/90"
             >
               {link.name}
             </a>
@@ -45,8 +32,8 @@ export default function Navigation() {
 
         {/* Logo (Centered) */}
         <div className="flex-shrink-0 flex justify-center">
-          <a href="#" className={`flex items-center transition-all duration-700 ${isScrolled ? 'scale-90 opacity-100' : 'scale-125 md:scale-[2.2] mt-4'}`}>
-            <BrandLogo isLight={!isScrolled} />
+          <a href="#" className="flex items-center">
+            <BrandLogo size="large" />
           </a>
         </div>
 
@@ -56,18 +43,14 @@ export default function Navigation() {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-[#28a0bc] ${isScrolled ? "text-slate-600" : "text-white/90"}`}
+              className="text-sm font-medium tracking-wide transition-colors hover:text-[#28a0bc] text-white/90"
             >
               {link.name}
             </a>
           ))}
           <a
             href="#enquire"
-            className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm ${
-              isScrolled 
-                ? "bg-[#ff7be6] text-white hover:bg-[#e66fcf]" 
-                : "bg-white text-slate-900 hover:bg-slate-50"
-            }`}
+            className="px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm bg-white text-slate-900 hover:bg-slate-50"
           >
             Enquire Now
           </a>
@@ -75,16 +58,16 @@ export default function Navigation() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 text-slate-800"
+          className="md:hidden p-2 text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
         >
           <div className="w-6 flex flex-col gap-1.5" aria-hidden="true">
-            <span className={`block h-[2px] w-full transition-all ${isScrolled ? 'bg-slate-800' : 'bg-white'}`}></span>
-            <span className={`block h-[2px] w-full transition-all ${isScrolled ? 'bg-slate-800' : 'bg-white'}`}></span>
-            <span className={`block h-[2px] w-3 transition-all ${isScrolled ? 'bg-slate-800' : 'bg-white'}`}></span>
+            <span className="block h-[2px] w-full bg-white"></span>
+            <span className="block h-[2px] w-full bg-white"></span>
+            <span className="block h-[2px] w-3 bg-white"></span>
           </div>
         </button>
       </div>

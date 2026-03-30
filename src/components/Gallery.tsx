@@ -15,12 +15,14 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-white">
+    <section id="gallery" className="py-24 bg-[#feffee]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800 mb-4 tracking-tight text-center">The Vibe</h2>
+          <h2 className="text-5xl md:text-7xl branded-heading mb-4">
+            The Vibe
+          </h2>
           <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
-            A glimpse into the Tequila Mockingbirds experience. Premium drinks, beautiful aesthetics, and unforgettable moments.
+            A glimpse into the premium frozen experience we bring to events across the UK.
           </p>
         </div>
 
