@@ -1,10 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BrandLogo from "./BrandLogo";
 
 export default function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "About", href: "#about" },
@@ -15,8 +24,8 @@ export default function Navigation() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-40 md:h-56">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#28a0bc] shadow-lg border-b border-[#28a0bc]/10" : "bg-transparent"}`}>
+      <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-24 md:h-28' : 'h-40 md:h-56'}`}>
         {/* Left Nav (Desktop) */}
         <nav className="hidden md:flex items-center gap-8 flex-1">
           {navLinks.slice(0, 3).map((link) => (
@@ -33,7 +42,7 @@ export default function Navigation() {
         {/* Logo (Centered) */}
         <div className="flex-shrink-0 flex justify-center">
           <a href="#" className="flex items-center">
-            <BrandLogo size="large" />
+            <BrandLogo size={isScrolled ? "small" : "large"} />
           </a>
         </div>
 
