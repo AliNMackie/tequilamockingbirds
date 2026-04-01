@@ -41,16 +41,8 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-48 pb-12 md:pt-64">
-        <div className="relative p-10 md:p-16">
-          {/* Branded Frame Accents */}
-          <div className="absolute inset-0 border-2 border-[#28a0bc]/20 rounded-[3rem] pointer-events-none"></div>
-          <div className="absolute -top-4 -left-4 w-16 h-16 border-t-4 border-l-4 border-[#28a0bc] rounded-tl-2xl pointer-events-none opacity-80"></div>
-          <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-4 border-r-4 border-[#ff7be6] rounded-br-2xl pointer-events-none opacity-80"></div>
-          
-          <h1 className="font-display text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-6 tracking-tight drop-shadow-2xl leading-[0.9]">
-            {heroContent.title}
-          </h1>
-          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-[#feffee]/95 mb-12 tracking-[0.25em] uppercase">
+        <div className="relative">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-medium text-[#feffee]/95 mb-12 tracking-[0.25em] uppercase drop-shadow-lg">
             {heroContent.subtitle}
           </h2>
           

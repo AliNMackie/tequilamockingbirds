@@ -7,8 +7,8 @@ export default function Packages() {
     <section id="packages" className="py-24 bg-[#FDFDFA]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 tracking-tight">
-            <span className="text-[#28a0bc]">Our</span> <span className="text-[#ff7be6]">Packages</span>
+          <h2 className="text-5xl md:text-7xl branded-heading mb-4">
+            Our Packages
           </h2>
           <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
             Choose the perfect frozen tequila experience for your event. All packages include our signature beautiful bar setup and professional bartenders.
@@ -25,15 +25,8 @@ export default function Packages() {
                   : pkg.id === "corporate-events"
                   ? "bg-[#feffee] border-slate-100 text-slate-800"
                   : "bg-[#ff7be6] border-[#ff7be6]/20 text-white"
-              } ${pkg.featured ? "md:scale-105 z-10" : ""}`}
+              }`}
             >
-              {pkg.featured && (
-                <div className={`absolute -top-4 left-1/2 -translate-x-1/2 text-white text-xs font-bold tracking-wider uppercase px-4 py-1.5 rounded-full shadow-md ${
-                  pkg.id === "corporate-events" ? "bg-[#28a0bc]" : "bg-slate-900"
-                }`}>
-                  Most Popular
-                </div>
-              )}
               
               <h3 className={`font-display text-2xl font-bold mb-2 mt-2 ${
                 pkg.id === "corporate-events" ? "text-slate-800" : "text-white"

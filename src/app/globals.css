@@ -26,14 +26,13 @@ html {
   text-shadow: 2px 2px 0px #28a0bc;
 }
 
-.branded-heading {
+.branded-heading-pink {
   @apply font-display font-bold tracking-tight;
-  color: #28a0bc;
-  text-shadow: 2px 2px 0px #ff7be6;
+  color: #ff7be6;
+  text-shadow: 2px 2px 0px #28a0bc;
 }
 
-.branded-heading-light {
-  @apply font-display font-bold tracking-tight;
-  color: #ffffff;
-  text-shadow: 2px 2px 0px #28a0bc;
+.branded-text-pink {
+  color: #ff7be6;
+  text-shadow: 1px 1px 0px #28a0bc;
 }

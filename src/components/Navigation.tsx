@@ -25,7 +25,7 @@ export default function Navigation() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#feffee] shadow-md border-b border-black/5" : "bg-transparent"}`}>
-      <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-24 md:h-28' : 'h-40 md:h-56'}`}>
+      <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-28 md:h-32' : 'h-48 md:h-64'}`}>
         {/* Left Nav (Desktop) */}
         <nav className="hidden md:flex items-center gap-8 flex-1">
           {navLinks.slice(0, 3).map((link) => (

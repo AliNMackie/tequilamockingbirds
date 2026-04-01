@@ -33,32 +33,48 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-[#28a0bc] text-white">
+    <section id="how-it-works" className="py-24 bg-[#FDFDFA]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl branded-heading-light mb-4">
+          <h2 className="text-5xl md:text-7xl branded-heading mb-4">
             How It Works
           </h2>
-          <p className="text-lg text-white/90 font-light max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
             Booking Tequila Mockingbirds is simple. We handle everything from the bar setup to the cleanup, so you can focus on enjoying the party.
           </p>
         </div>
 
         <div className="relative">
           {/* Connecting line for desktop */}
-          <div className="hidden md:block absolute top-[4.5rem] left-[10%] right-[10%] h-0.5 bg-white/20"></div>
+          <div className="hidden md:block absolute top-[4.5rem] left-[10%] right-[10%] h-0.5 bg-[#28a0bc]/20"></div>
 
           <div className="grid md:grid-cols-3 gap-12 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
-                <div className="w-36 h-36 rounded-full bg-white border-8 border-[#28a0bc] shadow-2xl flex flex-col items-center justify-center text-[#28a0bc] mb-8 relative group-hover:scale-105 transition-transform duration-300">
-                  {step.icon}
+                <div className="w-36 h-36 rounded-full bg-white border-8 border-[#28a0bc]/10 shadow-2xl flex flex-col items-center justify-center text-[#28a0bc] mb-8 relative group-hover:scale-105 transition-transform duration-300">
+                  {index === 0 && (
+                     <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                  )}
+                  {index === 1 && (
+                    /* Cocktail Glass SVG */
+                    <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2L4 12h16L12 2zm0 10v10m-4 0h8M6 8l6 6 6-6" />
+                    </svg>
+                  )}
+                  {index === 2 && (
+                    /* Wheels/Truck SVG */
+                    <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 011 1v2.5a.5.5 0 01-.5.5h-4a.5.5 0 01-.5-.5V17m4 0h2m0 0h2a1 1 0 001-1v-4a1 1 0 00-1-1h-2m1 5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM6 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                    </svg>
+                  )}
                   <div className="absolute top-0 right-0 w-8 h-8 rounded-full bg-[#ff7be6] text-white text-xs font-bold flex items-center justify-center shadow-md translate-x-2 -translate-y-2">
                     {step.number}
                   </div>
                 </div>
-                <h3 className="font-display text-xl font-semibold text-white mb-3">{step.title}</h3>
-                <p className="text-white/80 font-light leading-relaxed">{step.description}</p>
+                <h3 className="branded-text-pink text-2xl font-bold mb-3">{step.title}</h3>
+                <p className="text-slate-600 font-light leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>

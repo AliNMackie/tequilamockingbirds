@@ -8,8 +8,8 @@ interface BrandLogoProps {
 
 export default function BrandLogo({ className = "", isLight = false, size = "small" }: BrandLogoProps) {
   const dimensions = size === "large" 
-    ? "h-24 md:h-32 w-[240px] md:w-[320px]" 
-    : "h-12 md:h-16 w-[140px] md:w-[180px]";
+    ? "h-32 md:h-48 w-[280px] md:w-[400px]" 
+    : "h-16 md:h-24 w-[160px] md:w-[220px]";
 
   return (
     <div className={`flex items-center justify-center ${dimensions} ${className}`}>
