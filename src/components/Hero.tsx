@@ -6,15 +6,14 @@ import heroContent from "@/content/hero.json";
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Using simple generic placeholder URLs for now
-  // Real images can be dropped into the public folder later
-  const images = [
+  const images = heroContent?.images || [
     "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2000",
     "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=2000",
     "https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=2000",
   ];
 
   useEffect(() => {
+    if (images.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
     }, 5000);
@@ -26,7 +25,7 @@ export default function Hero() {
       {/* Background Slideshow */}
       {images.map((src, index) => (
         <div 
-          key={src}
+          key={src + index}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === currentImageIndex ? "opacity-40" : "opacity-0"
           }`}

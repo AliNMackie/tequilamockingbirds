@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import galleryContent from "@/content/gallery.json";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
 
-  const images = [
+  const images = galleryContent?.images || [
     { src: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800", alt: "Close up of frozen margarita with lime garnish" },
     { src: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=800", alt: "Happy guests enjoying frozen cocktails at a summer event" },
     { src: "https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=800", alt: "Professional bartender mixing a signature tequila drink" },

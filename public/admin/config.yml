@@ -22,6 +22,10 @@ collections:
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Button Text", name: "buttonText", widget: "string" }
           - { label: "Secondary Button Text", name: "secondaryButtonText", widget: "string" }
+          - label: "Background Slideshow"
+            name: "images"
+            widget: "list"
+            field: { label: "Image", name: "image", widget: "image" }
 
       - name: "about"
         label: "About Section"
@@ -31,11 +35,23 @@ collections:
           - { label: "Heading Highlight", name: "headingHighlight", widget: "string" }
           - { label: "Description Paragraph 1", name: "description1", widget: "text" }
           - { label: "Description Paragraph 2", name: "description2", widget: "text" }
+          - { label: "Feature Image", name: "image", widget: "image" }
           - name: "features"
             label: "Features"
             widget: "list"
             fields:
               - { label: "Text", name: "text", widget: "string" }
+
+      - name: "gallery"
+        label: "Gallery"
+        file: "src/content/gallery.json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
 
       - name: "packages"
         label: "Packages"
