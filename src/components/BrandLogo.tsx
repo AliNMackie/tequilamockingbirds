@@ -1,22 +1,27 @@
 "use client";
 
+import Image from "next/image";
+
 interface BrandLogoProps {
   className?: string;
   isLight?: boolean;
   size?: "small" | "large";
 }
 
-export default function BrandLogo({ className = "", isLight = false, size = "small" }: BrandLogoProps) {
+export default function BrandLogo({ className = "", size = "small" }: BrandLogoProps) {
   const dimensions = size === "large" 
-    ? "h-32 md:h-48 w-[280px] md:w-[400px]" 
-    : "h-16 md:h-24 w-[160px] md:w-[220px]";
+    ? { width: 400, height: 192 } // Based on h-48
+    : { width: 220, height: 96 }; // Based on h-24
 
   return (
-    <div className={`flex items-center justify-center ${dimensions} ${className}`}>
-      <img 
+    <div className={`relative flex items-center justify-center ${className}`}>
+      <Image 
         src="/trans-logo.png" 
         alt="Tequila Mockingbirds Logo" 
-        className="h-full w-auto max-w-none"
+        width={dimensions.width}
+        height={dimensions.height}
+        className="h-auto w-auto"
+        priority
       />
     </div>
   );

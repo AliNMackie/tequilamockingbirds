@@ -1,3 +1,4 @@
+import Image from "next/image";
 import aboutContent from "@/content/about.json";
 
 export default function About() {
@@ -28,10 +29,12 @@ export default function About() {
           {/* Right: Image */}
           <div className="relative h-[500px] md:h-[650px]">
             <div className="w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl relative border-8 border-white">
-              <img 
+              <Image 
                 src={aboutContent?.image || "https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=1000"} 
                 alt="Professional bartender preparing a signature frozen margarita at a Tequila Mockingbirds event" 
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             {/* Decorative accent */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import galleryContent from "@/content/gallery.json";
 
 export default function Gallery() {
@@ -44,10 +45,12 @@ export default function Gallery() {
               </div>
               <div className="absolute inset-0 border-4 border-[#28a0bc] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all z-20 rounded-xl pointer-events-none duration-300"></div>
               
-              <img 
+              <Image 
                 src={image.src} 
                 alt={image.alt} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 768px) 50vw, 33vw"
               />
             </button>
           ))}
@@ -73,10 +76,13 @@ export default function Gallery() {
             </svg>
           </button>
           <div className="relative max-w-5xl w-full h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
-            <img 
+            <Image 
               src={selectedImage.src} 
               alt={selectedImage.alt} 
-              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              fill
+              className="object-contain rounded-lg shadow-2xl"
+              sizes="90vw"
+              priority
             />
           </div>
         </div>

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #28a0bc;
-  --color-secondary: #ff7be6;
-  --color-background: #feffee;
+  --color-primary: #1a6678; /* Darker teal for accessibility */
+  --color-secondary: #c93b9f; /* Darker pink for accessibility */
+  --color-background: #FDFDFA;
   --color-foreground: #1E293B;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -16,23 +16,22 @@ html {
 
 .branded-heading {
   @apply font-display font-bold tracking-tight;
-  color: #28a0bc;
-  text-shadow: 2px 2px 0px #ff7be6;
+  color: #1a6678;
+  text-shadow: 2px 2px 0px rgba(201, 59, 159, 0.3);
 }
 
 .branded-heading-light {
   @apply font-display font-bold tracking-tight;
   color: #ffffff;
-  text-shadow: 2px 2px 0px #28a0bc;
+  text-shadow: 2px 2px 0px rgba(26, 102, 120, 0.5);
 }
 
 .branded-heading-pink {
   @apply font-display font-bold tracking-tight;
-  color: #ff7be6;
-  text-shadow: 2px 2px 0px #28a0bc;
+  color: #c93b9f;
+  text-shadow: 2px 2px 0px rgba(26, 102, 120, 0.3);
 }
 
 .branded-text-pink {
-  color: #ff7be6;
-  text-shadow: 1px 1px 0px #28a0bc;
+  color: #c93b9f;
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import heroContent from "@/content/hero.json";
 
 export default function Hero() {
@@ -30,10 +31,14 @@ export default function Hero() {
             index === currentImageIndex ? "opacity-40" : "opacity-0"
           }`}
         >
-          <img 
+          <Image 
             src={src} 
             alt="Tequila Mockingbirds premium mobile frozen cocktail bar service at a UK event" 
-            className="w-full h-full object-cover"
+            fill
+            priority={index === 0}
+            className="object-cover"
+            sizes="100vw"
+            quality={85}
           />
         </div>
       ))}
