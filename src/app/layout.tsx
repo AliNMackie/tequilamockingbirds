@@ -2,43 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import LoadingScreen from "@/components/LoadingScreen";
 
-export const metadata: Metadata = {
-  title: "Tequila Mockingbirds | Premium Mobile Frozen Cocktail Bar UK",
-  description: "Tequila Mockingbirds is a high-end mobile frozen tequila cocktail bar available for private parties, corporate events and festivals across the UK.",
-  keywords: ["mobile frozen cocktail bar", "frozen margarita bar hire", "mobile bar hire UK", "tequila bar corporate events", "cocktail bar festivals UK"],
-  openGraph: {
-    title: "Tequila Mockingbirds | Premium Mobile Frozen Cocktail Bar UK",
-    description: "High-end mobile frozen tequila cocktail bar for private parties, corporate events and festivals across the UK.",
-    url: "https://tequilamockingbirds.netlify.app",
-    siteName: "Tequila Mockingbirds",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1200",
-        width: 1200,
-        height: 630,
-        alt: "Tequila Mockingbirds Mobile Bar",
-      },
-    ],
-    locale: "en_GB",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Tequila Mockingbirds | Premium Mobile Frozen Cocktail Bar UK",
-    description: "High-end mobile frozen tequila cocktail bar for events across the UK.",
-    images: ["https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1200"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -143,12 +106,6 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="h-full scroll-smooth antialiased text-slate-800 bg-[#FDFDFA]">
-      <head>
-        <meta name="theme-color" content="#0E9FB5" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />

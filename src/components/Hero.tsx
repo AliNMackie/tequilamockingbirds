@@ -42,24 +42,6 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-48 pb-12 md:pt-64">
         <div className="relative">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-medium text-[#feffee]/95 mb-12 tracking-[0.25em] uppercase drop-shadow-lg">
-            {heroContent.subtitle}
-          </h2>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a
-              href="#enquire"
-              className="w-full sm:w-auto px-12 py-5 rounded-full bg-[#28a0bc] text-white font-semibold text-lg hover:bg-[#238ca5] transition-all shadow-xl shadow-[#28a0bc]/30 hover:scale-105 active:scale-95"
-            >
-              {heroContent.buttonText}
-            </a>
-            <a
-              href="#packages"
-              className="w-full sm:w-auto px-12 py-5 rounded-full bg-white text-slate-900 font-semibold text-lg hover:bg-slate-50 transition-all shadow-xl hover:scale-105 active:scale-95"
-            >
-              {heroContent.secondaryButtonText}
-            </a>
-          </div>
         </div>
       </div>
 

@@ -62,3 +62,20 @@ collections:
             fields:
               - { label: "Question", name: "question", widget: "string" }
               - { label: "Answer", name: "answer", widget: "text" }
+
+      - name: "site_settings"
+        label: "Site Settings"
+        file: "src/content/site-settings.json"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+
+      - name: "site_metadata"
+        label: "SEO & Metadata"
+        file: "src/content/site-metadata.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Site Description", name: "description", widget: "text" }
+          - { label: "Keywords", name: "keywords", widget: "string" }
+          - { label: "OG Image URL", name: "ogImage", widget: "image" }
