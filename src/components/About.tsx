@@ -8,6 +8,21 @@ export default function About() {
           
           {/* Left: Text Content */}
           <div className="space-y-10">
+            <h2 className="text-5xl md:text-7xl branded-heading mb-8">
+              {aboutContent?.heading || "Meet Tequila"} <br />
+              {aboutContent?.headingHighlight || "Mockingbirds"}
+            </h2>
+            <div className="space-y-8 text-xl text-slate-600 font-light leading-relaxed max-w-xl">
+              <p>
+                {aboutContent?.description1}
+              </p>
+              <p>
+                {aboutContent?.description2}
+              </p>
+              <p className="text-[#28a0bc] font-medium italic">
+                Anytime, Anywhere.
+              </p>
+            </div>
           </div>
 
           {/* Right: Image */}
