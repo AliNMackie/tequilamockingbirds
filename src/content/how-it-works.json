@@ -12,13 +12,13 @@
       "number": "02",
       "title": "Choose your line‑up",
       "description": "Select from our signature frozen serves, classic margaritas, and delicious mocktails to build your perfect drink menu.",
-      "icon": "cocktail"
+      "icon": "martini"
     },
     {
       "number": "03",
       "title": "We roll up and serve",
       "description": "We arrive early to set up our beautiful mobile bar, prepare the garnishes, and start serving frozen perfection to your guests.",
-      "icon": "truck"
+      "icon": "wheel"
     }
   ]
 }

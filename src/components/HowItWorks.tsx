@@ -14,6 +14,33 @@ const iconMap: Record<string, React.ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2L4 12h16L12 2zm0 10v10m-4 0h8M6 8l6 6 6-6" />
     </svg>
   ),
+  /* — Martini glass variants (from client reference) — */
+  martini: (
+    <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4h16l-8 8zm0 0l8 8m0 0v8m0 0H8m4 0h4" />
+    </svg>
+  ),
+  "martini-filled": (
+    <svg className="w-10 h-10" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4l8 8 8-8H4z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 12v8m-4 0h8" fill="none" />
+    </svg>
+  ),
+  margarita: (
+    <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4h16l-8 8zm0 0l8 8m0 0v8m0 0H8m4 0h4" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 4l3-2" />
+      <circle cx="19.5" cy="1.5" r="1.5" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  /* — Wheel icon (from client reference) — */
+  wheel: (
+    <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <circle cx="12" cy="12" r="10" strokeWidth={1.5} />
+      <circle cx="12" cy="12" r="3" strokeWidth={1.5} />
+      <path strokeLinecap="round" strokeWidth={1.5} d="M12 2v7m0 6v7M2 12h7m6 0h7M4.93 4.93l4.95 4.95m4.24 4.24l4.95 4.95M4.93 19.07l4.95-4.95m4.24-4.24l4.95-4.95" />
+    </svg>
+  ),
   truck: (
     <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 011 1v2.5a.5.5 0 01-.5.5h-4a.5.5 0 01-.5-.5V17m4 0h2m0 0h2a1 1 0 001-1v-4a1 1 0 00-1-1h-2m1 5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM6 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />

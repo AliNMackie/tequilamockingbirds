@@ -105,7 +105,11 @@ collections:
                 options:
                   - { label: "📅 Calendar", value: "calendar" }
                   - { label: "🍸 Cocktail", value: "cocktail" }
+                  - { label: "🍸 Martini Glass (outline)", value: "martini" }
+                  - { label: "🍸 Martini Glass (filled)", value: "martini-filled" }
+                  - { label: "🍹 Margarita (with garnish)", value: "margarita" }
                   - { label: "🚚 Truck / Delivery", value: "truck" }
+                  - { label: "☸️ Wheel", value: "wheel" }
                   - { label: "⭐ Star", value: "star" }
                   - { label: "❤️ Heart", value: "heart" }
                   - { label: "💬 Chat Bubble", value: "chat" }
