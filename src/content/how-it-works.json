@@ -1,0 +1,24 @@
+{
+  "heading": "How It Works",
+  "subtitle": "Booking Tequila Mockingbirds is simple. We handle everything from the bar setup to the cleanup, so you can focus on enjoying the party.",
+  "steps": [
+    {
+      "number": "01",
+      "title": "Tell us about your event",
+      "description": "Send an enquiry with your date, location, and guest numbers. We'll get back to you with a tailored quote within 24 hours.",
+      "icon": "calendar"
+    },
+    {
+      "number": "02",
+      "title": "Choose your line‑up",
+      "description": "Select from our signature frozen serves, classic margaritas, and delicious mocktails to build your perfect drink menu.",
+      "icon": "cocktail"
+    },
+    {
+      "number": "03",
+      "title": "We roll up and serve",
+      "description": "We arrive early to set up our beautiful mobile bar, prepare the garnishes, and start serving frozen perfection to your guests.",
+      "icon": "truck"
+    }
+  ]
+}

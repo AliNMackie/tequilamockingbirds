@@ -4,8 +4,18 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import heroContent from "@/content/hero.json";
 
+// Constrained font-size presets — keeps the design safe while giving the client control
+const subtitleSizeClasses: Record<string, string> = {
+  small:   "text-2xl md:text-3xl lg:text-5xl",
+  default: "text-4xl md:text-5xl lg:text-7xl",
+  large:   "text-5xl md:text-6xl lg:text-8xl",
+};
+
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const sizeKey = heroContent?.subtitleSize || "default";
+  const subtitleClasses = subtitleSizeClasses[sizeKey] || subtitleSizeClasses.default;
 
   const images = heroContent?.images || [
     "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2000",
@@ -46,7 +56,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-48 pb-12 md:pt-64">
         <div className="relative">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-medium text-[#feffee]/95 mb-12 tracking-[0.25em] uppercase drop-shadow-lg">
+          <h2 className={`font-display ${subtitleClasses} font-medium text-[#feffee]/95 mb-12 tracking-[0.25em] uppercase drop-shadow-lg`}>
             {heroContent?.subtitle || "Anytime, Anywhere"}
           </h2>
           

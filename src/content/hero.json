@@ -1,6 +1,7 @@
 {
   "title": "Tequila Mockingbirds",
   "subtitle": "Anytime Anywhere",
+  "subtitleSize": "default",
   "buttonText": "Enquire Now",
   "secondaryButtonText": "View Packages",
   "images": [

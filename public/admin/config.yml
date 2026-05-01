@@ -19,12 +19,22 @@ collections:
         file: "src/content/hero.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Subtitle / Strapline", name: "subtitle", widget: "string", hint: "The large text displayed in the centre of the hero banner." }
+          - label: "Strapline Size"
+            name: "subtitleSize"
+            widget: "select"
+            options:
+              - { label: "Small", value: "small" }
+              - { label: "Default", value: "default" }
+              - { label: "Large", value: "large" }
+            default: "default"
+            hint: "Controls the font size of the hero strapline. Choose 'Small' for a subtler look or 'Large' for maximum impact."
           - { label: "Button Text", name: "buttonText", widget: "string" }
           - { label: "Secondary Button Text", name: "secondaryButtonText", widget: "string" }
           - label: "Background Slideshow"
             name: "images"
             widget: "list"
+            hint: "Recommended size: 2000 × 1200 px (landscape, 5:3 ratio). These images fill the full screen behind the hero text, so use high-resolution landscape photos."
             field: { label: "Image", name: "image", widget: "image" }
 
       - name: "about"
@@ -35,7 +45,10 @@ collections:
           - { label: "Heading Highlight", name: "headingHighlight", widget: "string" }
           - { label: "Description Paragraph 1", name: "description1", widget: "text" }
           - { label: "Description Paragraph 2", name: "description2", widget: "text" }
-          - { label: "Feature Image", name: "image", widget: "image" }
+          - label: "Feature Image"
+            name: "image"
+            widget: "image"
+            hint: "Recommended size: 1000 × 1300 px (portrait, roughly 3:4 ratio). This image appears beside the About text on desktop."
           - name: "features"
             label: "Features"
             widget: "list"
@@ -49,8 +62,12 @@ collections:
           - label: "Images"
             name: "images"
             widget: "list"
+            hint: "Recommended size: 800 × 800 px (square, 1:1 ratio). Gallery images are displayed in a square grid."
             fields:
-              - { label: "Image", name: "src", widget: "image" }
+              - label: "Image"
+                name: "src"
+                widget: "image"
+                hint: "Upload a square image, ideally 800 × 800 px."
               - { label: "Alt Text", name: "alt", widget: "string" }
 
       - name: "packages"
@@ -67,6 +84,35 @@ collections:
               - { label: "Price", name: "price", widget: "string" }
               - { label: "Featured", name: "featured", widget: "boolean" }
               - { label: "Inclusions", name: "inclusions", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+
+      - name: "how_it_works"
+        label: "How It Works"
+        file: "src/content/how-it-works.json"
+        fields:
+          - { label: "Section Heading", name: "heading", widget: "string", hint: "Main heading displayed above the steps (e.g. 'How It Works')." }
+          - { label: "Section Subtitle", name: "subtitle", widget: "text", hint: "Short paragraph shown below the heading." }
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            hint: "Each step has a number badge, icon, title, and description."
+            fields:
+              - { label: "Number", name: "number", widget: "string", hint: "Displayed as a badge, e.g. 01, 02, 03." }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options:
+                  - { label: "📅 Calendar", value: "calendar" }
+                  - { label: "🍸 Cocktail", value: "cocktail" }
+                  - { label: "🚚 Truck / Delivery", value: "truck" }
+                  - { label: "⭐ Star", value: "star" }
+                  - { label: "❤️ Heart", value: "heart" }
+                  - { label: "💬 Chat Bubble", value: "chat" }
+                  - { label: "🎵 Music Note", value: "music" }
+                  - { label: "✅ Checkmark", value: "check" }
+                default: "star"
+                hint: "Pick an icon for this step. The emoji is a preview — the site uses a matching line-art icon."
 
       - name: "faq"
         label: "FAQ"
@@ -94,4 +140,7 @@ collections:
           - { label: "Site Title", name: "title", widget: "string" }
           - { label: "Site Description", name: "description", widget: "text" }
           - { label: "Keywords", name: "keywords", widget: "string" }
-          - { label: "OG Image URL", name: "ogImage", widget: "image" }
+          - label: "OG Image URL"
+            name: "ogImage"
+            widget: "image"
+            hint: "Recommended size: 1200 × 630 px (landscape). This image appears when the site is shared on social media."
