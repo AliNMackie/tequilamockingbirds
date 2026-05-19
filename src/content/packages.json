@@ -3,22 +3,23 @@
     {
       "id": "private-parties",
       "title": "Private Parties",
-      "description": "Perfect for birthdays, engagements, and garden parties. Elevate your celebration and make TM memories..",
-      "price": "Starting from £650 + VAT",
+      "description": "Perfect for birthdays, engagements, and garden parties. \nElevate your celebration and make TM memories..",
+      "price": "£650 + VAT",
       "featured": false,
       "inclusions": [
         "Premium 100% Blue Agave",
         "Natural syrups & fresh garnishes",
         "Margaritas mixed with Kombucha & Kefir water",
-        "1-2 hours Bar hire",
+        "1-2 hours bar hire",
         "Includes insurances and Occasional license. Application times can vary from council to council. For example Glasgow Council - 7 weeks. East Dunbartonshire - 4 weeks prior to event.",
-        "Barware"
+        "Sustainable barware",
+        "Non-alcoholic sodas can be made available "
       ]
     },
     {
       "id": "corporate-events",
-      "title": "Corporate & Brand Events",
-      "description": "Impress clients and treat your team. High-volume, high-quality service tailored to your brand aesthetic.",
+      "title": "Corporate Events",
+      "description": "Impress clients or treat your team. A TM service tailored to your business event.",
       "price": "POA",
       "featured": true,
       "inclusions": [
