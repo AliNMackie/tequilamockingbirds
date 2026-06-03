@@ -3,31 +3,33 @@
     {
       "id": "private-parties",
       "title": "TM 1",
-      "description": "Perfect for birthdays, engagements, garden parties & bespoke events. \nYou name it, we can do it! \n",
+      "description": "Perfect for birthdays, engagements, weddings, graduations, garden parties, pre-dinner drinks, bespoke events -  you name the celebration, we can do it! \n",
       "price": "£765 (incl VAT)",
       "featured": false,
       "inclusions": [
         "75 drinks with options to add more, if required",
         "Premium 100% Blue Agave Tequila",
-        "5 unique frozen margaritas",
+        "5 uniquely blended frozen margaritas including the crowd-pleasing classics and innovative TM pairings ",
         "Natural syrups & fresh garnishes",
         "1-2 hours bar hire",
         "Includes insurances and Occasional license. Application times can vary from council to council. ",
         "Sustainable barware",
-        "Non-alcoholic sodas can be made available "
+        "Non-alcoholic sodas available "
       ]
     },
     {
       "id": "corporate-events",
-      "title": "Corporate Events",
-      "description": "Impress clients or treat your team. We ca provide a TM service tailored to your business event.",
-      "price": "POA",
+      "title": "TM 2",
+      "description": "Suitable for larger celebrations or a thirsty flock",
+      "price": "£1530 including VAT",
       "featured": true,
       "inclusions": [
         "Premium 100% Blue Agave Tequila",
-        "5 unique and holistic frozen margaritas using feel good ingredients such as Kombucha & Kefir water.",
-        "Non-alcoholic frozen options",
-        "Sustainable barware"
+        "8 unique frozen margaritas including the crowd-pleasing classics and innovative TM blends",
+        "Natural syrups & garnishes",
+        "2-2.5 hours bar service",
+        "Sustainable barware",
+        "Non-alcoholic sodas available"
       ]
     },
     {
