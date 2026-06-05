@@ -20,7 +20,7 @@
     {
       "id": "corporate-events",
       "title": "TM 2",
-      "description": "This might be more suitable for larger parties or thirstier flocks. Our larger package delivers more frozen margaritas, more flavours and more fun!",
+      "description": "This might be more suitable for larger parties or thirstier flocks.  TMs ",
       "price": "£1530 (incl VAT)",
       "featured": true,
       "inclusions": [
@@ -36,7 +36,7 @@
     },
     {
       "id": "festivals-popups",
-      "title": "Corporate Events & Pop‑ups",
+      "title": "Corporate Events",
       "description": "Impress your clients, treat your team or book us for a unique pop-up bar experience. \nNo matter what the occasion, we can take flight and set up almost anywhere while providing the same energy, atmosphere and quality service.",
       "price": "POA",
       "featured": false,
