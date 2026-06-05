@@ -20,10 +20,11 @@
     {
       "id": "corporate-events",
       "title": "TM 2",
-      "description": "Suitable for larger celebrations or a thirsty flock, when your guest list grows so should the margaritas. Our package delivers more frozen margaritas more flavours and more fun. ",
-      "price": "£1530 incl VAT",
+      "description": "This might be more suitable for larger parties or thirstier flocks.  TMs ",
+      "price": "£1530 (incl VAT)",
       "featured": true,
       "inclusions": [
+        "150 drinks with the option to add more, if required",
         "Premium 100% Blue Agave Tequila",
         "8 uniquely blended frozen margaritas including the crowd-pleasing classics and innovative TM pairings",
         "Natural syrups & garnishes",
@@ -43,7 +44,8 @@
         "Premium 100% Blue Agave Tequila",
         "Natural syrups and fresh garnishes",
         " Unique frozen margaritas tailored to your event",
-        "Sustainable barware"
+        "Sustainable barware",
+        "Non-alcoholic sodas available"
       ]
     }
   ]
