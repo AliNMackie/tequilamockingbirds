@@ -1,10 +1,6 @@
 {
   "images": [
     {
-      "src": "/images/img_1311.jpeg",
-      "alt": "Close up of frozen margarita with lime garnish"
-    },
-    {
       "src": "/images/img_0124.jpeg",
       "alt": "Happy guests enjoying frozen cocktails at a summer event"
     },
@@ -15,6 +11,10 @@
     {
       "src": "/images/img_0127.jpeg",
       "alt": "The vibrant party atmosphere at a Tequila Mockingbirds event"
+    },
+    {
+      "src": "/images/img_1311.jpeg",
+      "alt": "Close up of frozen margarita with lime garnish"
     }
   ]
 }
