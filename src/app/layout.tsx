@@ -51,7 +51,7 @@ export default function RootLayout({
       "description": siteMetadata.description || "Tequila Mockingbirds is a high-end mobile frozen tequila cocktail bar available for private parties, corporate events and festivals across the UK.",
       "url": "https://tequilamockingbirds.netlify.app",
       "telephone": "+44 7700 000000",
-      "email": siteSettings.email || "hello@tequilamockingbirds.co.uk",
+      "email": siteSettings.email || "hello@tequilamockingbirds.com",
       "priceRange": "££",
       "areaServed": "United Kingdom",
       "image": siteMetadata.ogImage || "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800"
