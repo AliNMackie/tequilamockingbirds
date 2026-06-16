@@ -68,7 +68,7 @@ export default function Enquiry() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    fetch("/", {
+    fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ 
@@ -77,7 +77,10 @@ export default function Enquiry() {
         package: selectedPackage 
       })
     })
-      .then(() => {
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Server returned ${response.status}`);
+        }
         setIsSubmitting(false);
         setIsSuccess(true);
         setTimeout(() => setIsSuccess(false), 5000);
