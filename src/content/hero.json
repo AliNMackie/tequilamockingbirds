@@ -1,12 +1,13 @@
 {
   "title": "Tequila Mockingbirds",
   "subtitle": "Anytime Anywhere",
-  "subtitleSize": "default",
+  "subtitleSize": "small",
   "buttonText": "Enquire Now",
   "secondaryButtonText": "View Packages",
   "images": [
-    "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2000",
-    "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=2000",
-    "https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&q=80&w=2000"
+    "/images/94d0fe86-c36a-4d75-aae5-b75330aa6a76.jpeg",
+    "/images/8893e1a5-fe56-4007-8990-3b80579ba0ef.jpeg",
+    "/images/579413a7-f503-428e-bbcd-49370a09e31a.jpeg",
+    "/images/604a4156.jpg"
   ]
 }

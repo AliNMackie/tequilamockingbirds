@@ -4,23 +4,27 @@
   "items": [
     {
       "question": "How far do you travel?",
-      "answer": "Based in the UK, we cover events nationwide. Travel within a 50-mile radius of our base is included; beyond that, a small mileage fee applies."
+      "answer": "Based in Bearsden, we cover events in Scotland. We’re happy to travel but a small mileage fee will be applied outside G61."
     },
     {
       "question": "Do you need access to power and water?",
-      "answer": "We need access to a standard 13-amp plug socket to run our high-end frozen slush machines. We bring our own water supply for the machines if a mains connection isn't available nearby."
+      "answer": "All we need is access to a standard 13-amp plug socket and a 40 metre extension cable to get up and running. "
     },
     {
       "question": "Are non-alcoholic options available?",
-      "answer": "Absolutely. We always offer premium frozen mocktails alongside our signature alcoholic serves to ensure all guests are catered for."
+      "answer": "Yes. We offer local small-batched non-alcoholic sodas that share our ethos. Rapscallion use\n raw ingredients, never from concentrate. Pure fruit and spices."
     },
     {
-      "question": "Do you have a minimum spend or minimum guest count?",
-      "answer": "Our packages start for events with 30+ guests. For smaller intimate gatherings, please enquire for a bespoke quote."
+      "question": "How far in advance do I need to book?",
+      "answer": "As we sell alcohol, by law we need an Occasional license for each event. Application times vary from council to council. We would advise as much advance warning as possible."
     },
     {
-      "question": "What exactly is included in the service?",
-      "answer": "Everything you need: the mobile bar, machines, premium spirits & ingredients, glassware (or premium eco-cups), garnishes, and professional bartenders."
+      "question": "How much space do I need for the TM truck to access my property/venue?",
+      "answer": "Our little truck is 4m x 2m, so we do need a bit of space to access your property. If you’re unsure about set up for your location, please don’t hesitate to mention this in your enquiry."
+    },
+    {
+      "question": "How do we pay for Tequila Mockingbirds?",
+      "answer": "Once your date is secured, we will ask for a non-refundable deposit of £150. The remaining balance will be due 4 weeks prior to your event. "
     }
   ]
 }
