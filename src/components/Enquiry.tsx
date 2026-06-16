@@ -34,9 +34,20 @@ export default function Enquiry() {
       }
     };
 
+    const handleCustomSelect = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      if (customEvent.detail) {
+        setSelectedPackage(customEvent.detail);
+      }
+    };
+
     checkParams();
     window.addEventListener('hashchange', checkParams);
-    return () => window.removeEventListener('hashchange', checkParams);
+    window.addEventListener('select-package', handleCustomSelect);
+    return () => {
+      window.removeEventListener('hashchange', checkParams);
+      window.removeEventListener('select-package', handleCustomSelect);
+    };
   }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);

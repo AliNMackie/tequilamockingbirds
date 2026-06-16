@@ -1,9 +1,23 @@
+"use client";
+
 import packagesContent from "@/content/packages.json";
 
 export default function Packages() {
   const heading = packagesContent?.heading || "Our Packages";
   const subtitle = packagesContent?.subtitle || "Choose the perfect frozen tequila experience for your event. All packages include our signature beautiful bar setup and professional bartenders.";
   const packages = packagesContent?.items || [];
+
+  const handleEnquireClick = (pkgId: string) => {
+    const newUrl = `${window.location.pathname}?package=${pkgId}#enquire`;
+    window.history.pushState(null, "", newUrl);
+    
+    window.dispatchEvent(new CustomEvent("select-package", { detail: pkgId }));
+    
+    const element = document.getElementById("enquire");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section id="packages" className="py-24 bg-[#FDFDFA]">
@@ -59,7 +73,11 @@ export default function Packages() {
               </ul>
 
               <a 
-                href={`#enquire?package=${pkg.id || idx}`}
+                href="#enquire"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleEnquireClick(pkg.id || String(idx));
+                }}
                 className={`w-full py-3 rounded-full text-center font-medium transition-all ${
                   pkg.id === "corporate-events" 
                     ? "bg-[#28a0bc] text-white hover:bg-[#238ca5] shadow-md shadow-[#28a0bc]/20" 
