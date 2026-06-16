@@ -45,6 +45,7 @@ collections:
           - { label: "Heading Highlight", name: "headingHighlight", widget: "string" }
           - { label: "Description Paragraph 1", name: "description1", widget: "text" }
           - { label: "Description Paragraph 2", name: "description2", widget: "text" }
+          - { label: "Tagline", name: "tagline", widget: "string", hint: "Italicised text at the end of the description, e.g. 'Anytime, Anywhere.'" }
           - label: "Feature Image"
             name: "image"
             widget: "image"
@@ -59,6 +60,8 @@ collections:
         label: "Gallery"
         file: "src/content/gallery.json"
         fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
           - label: "Images"
             name: "images"
             widget: "list"
@@ -74,6 +77,8 @@ collections:
         label: "Packages"
         file: "src/content/packages.json"
         fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
           - label: "Items"
             name: "items"
             widget: "list"
@@ -122,6 +127,8 @@ collections:
         label: "FAQ"
         file: "src/content/faq.json"
         fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
           - label: "Items"
             name: "items"
             widget: "list"
@@ -136,6 +143,9 @@ collections:
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Instagram URL", name: "instagram", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Footer Tagline", name: "footerTagline", widget: "string" }
+          - { label: "Enquiry Title", name: "enquiryTitle", widget: "string" }
+          - { label: "Enquiry Description", name: "enquiryDescription", widget: "text" }
 
       - name: "site_metadata"
         label: "SEO & Metadata"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import siteSettings from "@/content/site-settings.json";
 
 export default function Enquiry() {
   const [selectedPackage, setSelectedPackage] = useState("");
@@ -85,9 +86,11 @@ export default function Enquiry() {
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Enquire Now</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            {siteSettings.enquiryTitle || "Enquire Now"}
+          </h2>
           <p className="text-lg text-white/80 font-light max-w-2xl mx-auto">
-            Tell us a few details about your celebration and we’ll come back with a tailored quote within 24 hours.
+            {siteSettings.enquiryDescription || "Tell us a few details about your celebration and we’ll come back with a tailored quote within 24 hours."}
           </p>
         </div>        <form 
           name="enquiry"

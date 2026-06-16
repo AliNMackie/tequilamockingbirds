@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import LoadingScreen from "@/components/LoadingScreen";
 import siteMetadata from "@/content/site-metadata.json";
+import siteSettings from "@/content/site-settings.json";
+import packagesContent from "@/content/packages.json";
+import faqContent from "@/content/faq.json";
 
 export const metadata: Metadata = {
   title: siteMetadata.title || "Tequila Mockingbirds",
@@ -45,59 +48,25 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Tequila Mockingbirds",
-      "description": "Tequila Mockingbirds is a high-end mobile frozen tequila cocktail bar available for private parties, corporate events and festivals across the UK.",
+      "description": siteMetadata.description || "Tequila Mockingbirds is a high-end mobile frozen tequila cocktail bar available for private parties, corporate events and festivals across the UK.",
       "url": "https://tequilamockingbirds.netlify.app",
       "telephone": "+44 7700 000000",
-      "email": "hello@tequilamockingbirds.co.uk",
+      "email": siteSettings.email || "hello@tequilamockingbirds.co.uk",
       "priceRange": "££",
       "areaServed": "United Kingdom",
-      "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800"
+      "image": siteMetadata.ogImage || "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800"
     },
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How far do you travel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Based in the UK, we cover events nationwide. Travel within a 50-mile radius of our base is included; beyond that, a small mileage fee applies."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you need access to power and water?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We need access to a standard 13-amp plug socket to run our high-end frozen slush machines. We bring our own water supply for the machines if a mains connection isn't available nearby."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are non-alcoholic options available?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. We always offer premium frozen mocktails alongside our signature alcoholic serves to ensure all guests are catered for."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you have a minimum spend or minimum guest count?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our packages start for events with 30+ guests. For smaller intimate gatherings, please enquire for a bespoke quote."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What exactly is included in the service?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Everything you need: the mobile bar, machines, premium spirits & ingredients, glassware (or premium eco-cups), garnishes, and professional bartenders."
-          }
+      "mainEntity": (faqContent?.items || []).map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
         }
-      ]
+      }))
     },
     {
       "@context": "https://schema.org",
@@ -110,34 +79,22 @@ export default function RootLayout({
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Event Packages",
-        "itemListElement": [
-          {
+        "itemListElement": (packagesContent?.items || []).map(pkg => {
+          const offer: any = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Private Parties",
-              "description": "Perfect for birthdays, engagements, and garden parties. Elevate your celebration with a touch of beach club luxury."
-            },
-            "price": "450.00",
-            "priceCurrency": "GBP"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Corporate & Brand Events",
-              "description": "Impress clients and treat your team. High-volume, high-quality service tailored to your brand aesthetic."
+              "name": pkg.title,
+              "description": pkg.description
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Festivals & Pop-ups",
-              "description": "The ultimate crowd-pleaser. Fast-paced service for high footfall environments without compromising on quality."
-            }
+          };
+          const numericPriceMatch = pkg.price?.match(/\d+/);
+          if (numericPriceMatch) {
+            offer.price = `${numericPriceMatch[0]}.00`;
+            offer.priceCurrency = "GBP";
           }
-        ]
+          return offer;
+        })
       }
     }
   ];

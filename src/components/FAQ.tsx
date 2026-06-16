@@ -12,15 +12,18 @@ export default function FAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const heading = faqContent?.heading || "FAQ";
+  const subtitle = faqContent?.subtitle || "Everything you need to know about booking Tequila Mockingbirds.";
+
   return (
     <section id="faq" className="py-24 bg-[#ff7be6] text-white">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl branded-heading-light mb-4">
-            FAQ
+            {heading}
           </h2>
           <p className="text-lg text-white/90 font-light">
-            Everything you need to know about booking Tequila Mockingbirds.
+            {subtitle}
           </p>
         </div>
 

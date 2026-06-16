@@ -21,9 +21,22 @@ export default function About() {
                 {aboutContent?.description2}
               </p>
               <p className="text-[#28a0bc] font-medium italic">
-                Anytime, Anywhere.
+                {aboutContent?.tagline || "Anytime, Anywhere."}
               </p>
             </div>
+
+            {aboutContent?.features && aboutContent.features.length > 0 && (
+              <ul className="space-y-4 pt-4 border-t border-[#28a0bc]/10">
+                {aboutContent.features.map((feature: { text: string }, i: number) => (
+                  <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
+                    <svg className="w-6 h-6 text-[#ff7be6] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{feature.text}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           {/* Right: Image */}

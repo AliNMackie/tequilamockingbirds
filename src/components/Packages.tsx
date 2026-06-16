@@ -1,6 +1,8 @@
 import packagesContent from "@/content/packages.json";
 
 export default function Packages() {
+  const heading = packagesContent?.heading || "Our Packages";
+  const subtitle = packagesContent?.subtitle || "Choose the perfect frozen tequila experience for your event. All packages include our signature beautiful bar setup and professional bartenders.";
   const packages = packagesContent?.items || [];
 
   return (
@@ -8,10 +10,10 @@ export default function Packages() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl branded-heading mb-4">
-            Our Packages
+            {heading}
           </h2>
           <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
-            Choose the perfect frozen tequila experience for your event. All packages include our signature beautiful bar setup and professional bartenders.
+            {subtitle}
           </p>
         </div>
 

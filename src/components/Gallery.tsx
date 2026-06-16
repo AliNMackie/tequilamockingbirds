@@ -16,15 +16,18 @@ export default function Gallery() {
     { src: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&q=80&w=800", alt: "The vibrant party atmosphere at a Tequila Mockingbirds event" },
   ];
 
+  const heading = galleryContent?.heading || "The Vibe";
+  const subtitle = galleryContent?.subtitle || "A glimpse into the premium frozen experience we bring to events across the UK.";
+
   return (
     <section id="gallery" className="py-24 bg-[#feffee]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl branded-heading mb-4">
-            The Vibe
+            {heading}
           </h2>
           <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
-            A glimpse into the premium frozen experience we bring to events across the UK.
+            {subtitle}
           </p>
         </div>
 

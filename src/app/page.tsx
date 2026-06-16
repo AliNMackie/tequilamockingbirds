@@ -66,7 +66,7 @@ export default function Home() {
           
           <div className="mt-12 pt-8 border-t border-slate-200 text-center">
             <p className="text-[11px] text-slate-400 tracking-[0.2em] uppercase font-medium">
-              A Premium Mobile Frozen Tequila Bar. Available Across the UK.
+              {siteSettings.footerTagline || "A Premium Mobile Frozen Tequila Bar. Available Across the UK."}
             </p>
           </div>
         </div>
