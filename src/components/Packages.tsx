@@ -31,7 +31,7 @@ export default function Packages() {
             >
               
               <h3 className={`font-display text-2xl font-bold mb-2 mt-2 ${
-                pkg.id === "corporate-events" ? "text-slate-800" : "text-white"
+                pkg.id === "corporate-events" ? "text-[#238ca5]" : "text-white"
               }`}>{pkg.title || "Package Title"}</h3>
               <p className={`font-light mb-6 text-sm flex-grow ${
                 pkg.id === "corporate-events" ? "text-slate-600" : "text-white/90"
