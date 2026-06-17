@@ -25,7 +25,7 @@ export default function Navigation() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#feffee] shadow-md border-b border-black/5" : "bg-transparent"}`}>
-      <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-28 md:h-32' : 'h-48 md:h-64'}`}>
+      <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 relative ${isScrolled ? 'h-28 md:h-32' : 'h-48 md:h-64'}`}>
         {/* Left Nav (Desktop) */}
         <nav className="hidden md:flex items-center gap-8 flex-1">
           {navLinks.slice(0, 3).map((link) => (
@@ -39,8 +39,8 @@ export default function Navigation() {
           ))}
         </nav>
 
-        {/* Logo (Centered) */}
-        <div className="flex-shrink-0 flex justify-center">
+        {/* Logo (Centered on mobile via absolute, flex-centered on desktop) */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 flex-shrink-0 flex justify-center z-10">
           <a href="#" className="flex items-center">
             <BrandLogo size={isScrolled ? "small" : "large"} />
           </a>
@@ -69,9 +69,9 @@ export default function Navigation() {
           </a>
         </nav>
 
-        {/* Mobile toggle */}
+        {/* Mobile toggle (pushed right via ml-auto) */}
         <button
-          className={`md:hidden p-2 ${isScrolled ? 'text-slate-800' : 'text-white'}`}
+          className={`md:hidden p-2 ml-auto z-20 ${isScrolled ? 'text-slate-800' : 'text-white'}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
