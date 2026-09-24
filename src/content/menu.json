@@ -1,0 +1,83 @@
+{
+  "heading": "Our Menu",
+  "headingHighlight": "Fresh, Frozen & Fabulous",
+  "subtitle": "At Tequila Mockingbirds, we believe exceptional drinks start with feel-good ingredients. We’ve reimagined the classic frozen margarita with a wellness-inspired twist—blending 100% premium blue agave tequila with natural agave nectar, cold-pressed citrus, and pure fruit purées. No artificial syrups, no nonsense—just vibrant flavour, silky smooth texture, and good clean fun.",
+  "features": [
+    { "text": "100% Premium Blue Agave Tequila" },
+    { "text": "Naturally Sweetened with Agave Nectar" },
+    { "text": "Cold-Pressed Citrus & Real Fruit Purées" },
+    { "text": "Alcohol-Free 0.0% Mocktail Blends Available" }
+  ],
+  "images": [
+    {
+      "src": "/images/604a4157.jpg",
+      "title": "The TM Classic Frozen Margarita",
+      "subtitle": "100% Blue Agave, fresh lime juice & organic agave nectar with sea salt rim.",
+      "alt": "Close up of freshly poured frozen margarita with lime garnish and salt rim"
+    },
+    {
+      "src": "/images/img_0128.jpeg",
+      "title": "Natural Purées & Seasonal Botanicals",
+      "subtitle": "Wild strawberries, fresh garden basil, spicy mango and pink grapefruit.",
+      "alt": "Selection of fresh ingredients and vibrant frozen cocktail blends"
+    },
+    {
+      "src": "/images/img_0127.jpeg",
+      "title": "Poured Fresh & Ice-Cold",
+      "subtitle": "Commercial frozen margarita dispensers delivering the ultimate party texture.",
+      "alt": "Tequila Mockingbirds frozen bar dispenser and chilled glasses"
+    },
+    {
+      "src": "/images/img_0124.jpeg",
+      "title": "Zero-Proof Mocktails & Spritzes",
+      "subtitle": "All the vibrant fiesta flavour and celebration, completely alcohol-free.",
+      "alt": "Guests enjoying fresh frozen cocktails and mocktails at a summer event"
+    }
+  ],
+  "drinks": [
+    {
+      "name": "The TM Classic Frozen Margarita",
+      "category": "Signature Margaritas",
+      "description": "Our flagship pour. 100% premium blue agave tequila, freshly pressed lime juice, and pure organic agave nectar, frozen to silky perfection. Finished with a fine sea salt or citrus rim.",
+      "tag": "Crowd Favourite",
+      "isSignature": true
+    },
+    {
+      "name": "Spicy Mango Habanero",
+      "category": "Signature Margaritas",
+      "description": "Sun-ripened Alphonso mango purée balanced with a warm habanero tingle, fresh Mexican lime, and premium tequila. Served with a zesty tajín chilli-lime rim.",
+      "tag": "Spicy Kick",
+      "isSignature": true
+    },
+    {
+      "name": "Strawberry & Garden Basil Smash",
+      "category": "Signature Margaritas",
+      "description": "Sweet wild strawberry purée muddled with aromatic fresh garden basil, tart lime, and smooth blanco tequila. A fragrant, summery party standout.",
+      "tag": "Summer Hit",
+      "isSignature": true
+    },
+    {
+      "name": "Passionfruit & Coconut Paloma",
+      "category": "Signature Margaritas",
+      "description": "Tart tropical passionfruit purée and pink grapefruit juice shaken with blue agave tequila, softened with refreshing coconut water and a hint of lime.",
+      "tag": "Tropical",
+      "isSignature": false
+    },
+    {
+      "name": "Watermelon & Fresh Mint Refresher",
+      "category": "Signature Margaritas",
+      "description": "Cold-pressed sweet watermelon juice, hand-picked garden mint, crisp lime, and 100% agave tequila. Exceptionally light, hydrating, and naturally sweet.",
+      "tag": "Crisp & Clean",
+      "isSignature": false
+    },
+    {
+      "name": "The Virgin Mockingbird (0.0% ABV)",
+      "category": "Wellness & Mocktails",
+      "description": "All the festival energy and vibrant flavour, without the alcohol. Freshly pressed lime, artisan fruit purées, organic agave, and sparkling botanical sodas.",
+      "tag": "Alcohol-Free",
+      "isSignature": false
+    }
+  ],
+  "customNoteHeading": "Want a Custom Menu for Your Flock?",
+  "customNote": "Every celebration is unique! When you book any Tequila Mockingbirds package, we consult with you ahead of time so you can choose your favourite frozen flavours, add seasonal specials, or coordinate bespoke colours to match your event theme."
+}

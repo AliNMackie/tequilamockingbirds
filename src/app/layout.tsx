@@ -7,6 +7,7 @@ import packagesContent from "@/content/packages.json";
 import faqContent from "@/content/faq.json";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tequilamockingbirds.netlify.app"),
   title: siteMetadata.title || "Tequila Mockingbirds",
   description: siteMetadata.description,
   keywords: siteMetadata.keywords.split(",").map(k => k.trim()),
@@ -80,7 +81,7 @@ export default function RootLayout({
         "@type": "OfferCatalog",
         "name": "Event Packages",
         "itemListElement": (packagesContent?.items || []).map(pkg => {
-          const offer: any = {
+          const offer: Record<string, unknown> = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",

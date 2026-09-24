@@ -117,7 +117,7 @@ export default function Enquiry() {
           {/* Netlify hidden inputs */}
           <input type="hidden" name="form-name" value="enquiry" />
           <p className="hidden">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            <label>Don&apos;t fill this out if you&apos;re human: <input name="bot-field" /></label>
           </p>
 
           {isSuccess ? (
@@ -128,7 +128,7 @@ export default function Enquiry() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-2">Enquiry Sent Successfully</h3>
-              <p className="text-white/70">Thank you! We'll be in touch with your tailored quote shortly.</p>
+              <p className="text-white/70">Thank you! We&apos;ll be in touch with your tailored quote shortly.</p>
             </div>
           ) : (
             <>
@@ -191,7 +191,7 @@ export default function Enquiry() {
                     onChange={(e) => setSelectedPackage(e.target.value)}
                     className="w-full bg-slate-800 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#28a0bc] focus:ring-1 focus:ring-[#28a0bc] transition-colors appearance-none"
                   >
-                    <option value="">I'm not sure yet</option>
+                    <option value="">I&apos;m not sure yet</option>
                     <option value="private-parties">Private Parties</option>
                     <option value="corporate-events">Corporate & Brand Events</option>
                     <option value="festivals-popups">Festivals & Pop-ups</option>

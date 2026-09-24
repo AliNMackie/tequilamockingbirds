@@ -56,6 +56,39 @@ collections:
             fields:
               - { label: "Text", name: "text", widget: "string" }
 
+      - name: "menu"
+        label: "Our Menu"
+        file: "src/content/menu.json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Heading Highlight", name: "headingHighlight", widget: "string" }
+          - { label: "Intro Description / Copy", name: "subtitle", widget: "text", hint: "Description of your drinks and wellness-inspired philosophy." }
+          - label: "Key Highlights"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+          - label: "Featured Drink Photos (3–4 Images)"
+            name: "images"
+            widget: "list"
+            hint: "Upload 3 or 4 photos of your drinks. You can update and swap these pictures every few months."
+            fields:
+              - { label: "Photo", name: "src", widget: "image" }
+              - { label: "Title / Caption", name: "title", widget: "string" }
+              - { label: "Short Description", name: "subtitle", widget: "string" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "Drinks & Cocktails List"
+            name: "drinks"
+            widget: "list"
+            fields:
+              - { label: "Drink Name", name: "name", widget: "string" }
+              - { label: "Category", name: "category", widget: "string", hint: "e.g. Signature Margaritas, Wellness & Mocktails" }
+              - { label: "Description & Ingredients", name: "description", widget: "text" }
+              - { label: "Tag / Badge", name: "tag", widget: "string", required: false, hint: "e.g. Crowd Favourite, Spicy Kick, Summer Hit, Alcohol-Free" }
+              - { label: "Signature Highlight", name: "isSignature", widget: "boolean", default: false }
+          - { label: "Custom Note Heading", name: "customNoteHeading", widget: "string" }
+          - { label: "Custom Note Text", name: "customNote", widget: "text" }
+
       - name: "gallery"
         label: "Gallery"
         file: "src/content/gallery.json"

@@ -1,11 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import BrandLogo from "./BrandLogo";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +20,12 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Packages", href: "#packages" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "FAQ", href: "#faq" },
+    { name: "About", href: isHome ? "#about" : "/#about" },
+    { name: "Our Menu", href: "/menu" },
+    { name: "Packages", href: isHome ? "#packages" : "/#packages" },
+    { name: "How It Works", href: isHome ? "#how-it-works" : "/#how-it-works" },
+    { name: "Gallery", href: isHome ? "#gallery" : "/#gallery" },
+    { name: "FAQ", href: isHome ? "#faq" : "/#faq" },
   ];
 
   return (
@@ -28,37 +33,46 @@ export default function Navigation() {
       <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 relative ${isScrolled ? 'h-28 md:h-32' : 'h-48 md:h-64'}`}>
         {/* Left Nav (Desktop) */}
         <nav className="hidden md:flex items-center gap-8 flex-1">
-          {navLinks.slice(0, 3).map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-[#28a0bc] ${isScrolled ? 'text-slate-800' : 'text-white/90'}`}
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.slice(0, 3).map((link) => {
+            const isCurrentPage = pathname === link.href;
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`text-sm tracking-wide transition-colors hover:text-[#28a0bc] ${
+                  isCurrentPage
+                    ? "text-[#28a0bc] font-semibold"
+                    : isScrolled
+                    ? "text-slate-800 font-medium"
+                    : "text-white/90 font-medium"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Logo (Centered on mobile via absolute, flex-centered on desktop) */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 flex-shrink-0 flex justify-center z-10">
-          <a href="#" className="flex items-center">
+          <Link href="/" className="flex items-center" aria-label="Tequila Mockingbirds Home">
             <BrandLogo size={isScrolled ? "small" : "large"} />
-          </a>
+          </Link>
         </div>
 
         {/* Right Nav (Desktop) */}
         <nav className="hidden md:flex items-center justify-end gap-8 flex-1">
           {navLinks.slice(3).map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className={`text-sm font-medium tracking-wide transition-colors hover:text-[#28a0bc] ${isScrolled ? 'text-slate-800' : 'text-white/90'}`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#enquire"
+          <Link
+            href={isHome ? "#enquire" : "/#enquire"}
             className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm ${
               isScrolled 
                 ? "bg-[#28a0bc] text-white hover:bg-[#238ca5]" 
@@ -66,7 +80,7 @@ export default function Navigation() {
             }`}
           >
             Enquire Now
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile toggle (pushed right via ml-auto) */}
@@ -89,22 +103,24 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div id="mobile-menu" className="md:hidden absolute top-full left-0 right-0 bg-[#feffee] shadow-lg border-t border-slate-100 p-6 flex flex-col gap-4">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
-              className="text-lg font-medium text-slate-800 py-2 border-b border-slate-100"
+              className={`text-lg font-medium py-2 border-b border-slate-100 ${
+                pathname === link.href ? "text-[#28a0bc]" : "text-slate-800"
+              }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#enquire"
+          <Link
+            href={isHome ? "#enquire" : "/#enquire"}
             className="mt-4 w-full text-center px-6 py-3 rounded-full bg-[#28a0bc] text-white font-medium"
             onClick={() => setMobileMenuOpen(false)}
           >
             Enquire Now
-          </a>
+          </Link>
         </div>
       )}
     </header>

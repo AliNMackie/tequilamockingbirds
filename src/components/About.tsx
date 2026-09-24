@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import aboutContent from "@/content/about.json";
 
 export default function About() {
@@ -37,6 +38,18 @@ export default function About() {
                 ))}
               </ul>
             )}
+
+            <div className="pt-2">
+              <Link 
+                href="/menu" 
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#28a0bc]/10 text-[#1a6678] font-semibold text-sm hover:bg-[#28a0bc] hover:text-white transition-all group"
+              >
+                <span>Explore Our Drinks Menu</span>
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </div>
 
           {/* Right: Image */}
