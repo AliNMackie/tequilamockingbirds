@@ -1,12 +1,20 @@
 {
   "heading": "Our Menu",
   "headingHighlight": "Fresh, Frozen & Fabulous",
-  "subtitle": "At Tequila Mockingbirds, we believe exceptional drinks start with feel-good ingredients. We’ve reimagined the classic frozen margarita with a wellness-inspired twist—blending 100% premium blue agave tequila with natural agave nectar, cold-pressed citrus, and pure fruit purées. No artificial syrups, no nonsense—just vibrant flavour, silky smooth texture, and good clean fun.",
+  "subtitle": "At Tequila Mockingbirds, we believe exceptional drinks start with feel-good ingredients. We’ve reimagined the classic frozen margarita with a wellness-inspired twist—blending 100% premium blue agave tequila with natural syrups and fresh garnished. No artificial nonsense - good clean fun.",
   "features": [
-    { "text": "100% Premium Blue Agave Tequila" },
-    { "text": "Naturally Sweetened with Agave Nectar" },
-    { "text": "Cold-Pressed Citrus & Real Fruit Purées" },
-    { "text": "Alcohol-Free 0.0% Mocktail Blends Available" }
+    {
+      "text": "100% Premium Blue Agave Tequila"
+    },
+    {
+      "text": "Naturally Sweetened with Agave Nectar"
+    },
+    {
+      "text": "Cold-Pressed Citrus & Real Fruit Purées"
+    },
+    {
+      "text": "Alcohol-Free 0.0% Mocktail Blends Available"
+    }
   ],
   "images": [
     {
