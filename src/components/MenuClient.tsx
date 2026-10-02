@@ -137,9 +137,6 @@ export default function MenuClient() {
 
                 {/* Card Caption */}
                 <div className="mt-auto p-5 relative z-10">
-                  <div className="inline-block px-2.5 py-0.5 rounded-full bg-[#ff7be6] text-white text-[10px] font-bold uppercase tracking-wider mb-2">
-                    Photo 0{idx + 1}
-                  </div>
                   <h3 className="font-display font-bold text-white text-lg leading-snug drop-shadow-sm group-hover:text-[#28a0bc] transition-colors">
                     {img.title}
                   </h3>
