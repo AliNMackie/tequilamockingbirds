@@ -68,8 +68,8 @@
       "name": "Mango Remedy",
       "category": "Signature Margaritas",
       "description": "A refreshing tropical fusion of mango, tequila and citrus. Too good to be true. ",
-      "tag": "Tropical",
-      "isSignature": false
+      "tag": "",
+      "isSignature": true
     },
     {
       "name": "Rapscallion Sodas",
